@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Importa Router
 
 @Component({
   selector: 'app-inicio',
@@ -8,10 +9,12 @@ import { Component } from '@angular/core';
 export class InicioComponent {
   showRules: boolean = false;
 
-  // Método para iniciar el juego
+  record: number = 0; // Inicializa el récord
+
+  constructor(private router: Router) {} // Inyecta Router
+
   startGame() {
-    // Aquí puedes agregar la lógica para iniciar el juego o navegar a otra vista
-    console.log("Juego iniciado");
+    this.router.navigate(['/game']); // Redirige al componente de juego
   }
 
   // Método para mostrar/ocultar las reglas
