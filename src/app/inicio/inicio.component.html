@@ -5,6 +5,10 @@
     <!-- Contenedor principal de contenido -->
     <div class="content">
       <h1>Bienvenido al juego Científicos - Robots</h1>
+
+      <div class="record">
+        <h2>Récord: <!--{{ record }}--></h2> <!-- Aquí se muestra la variable global -->
+      </div>
   
       <!-- Botones de navegación -->
       <button (click)="startGame()">Iniciar Juego</button>
@@ -24,5 +28,8 @@
           <br />• Para ganar el juego, debes pasar los 3 científicos y los 3 robots al segundo laboratorio.
         </p>
       </div>
+      
+      <!-- Botón para pantalla completa -->
+    <button (click)="toggleFullScreen()">Pantalla Completa</button>
     </div>
   </div>

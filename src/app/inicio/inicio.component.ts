@@ -18,4 +18,13 @@ export class InicioComponent {
   toggleRules() {
     this.showRules = !this.showRules;
   }
+  toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen(); // Pide pantalla completa
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen(); // Salir de pantalla completa
+      }
+    }
+  }
 }
