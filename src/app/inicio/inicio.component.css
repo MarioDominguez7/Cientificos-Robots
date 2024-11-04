@@ -1,0 +1,57 @@
+/* Contenedor principal */
+.inicio-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; /* Color blanco para el texto */
+    text-align: center;
+  }
+  
+  /* Imagen de fondo */
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/fondoprincipal.png'); /* Cambia por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.7); /* Oscurece ligeramente el fondo para resaltar el texto */
+  }
+  
+  /* Contenedor de contenido */
+  .content {
+    z-index: 1;
+    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
+  }
+  
+  /* Estilos de los botones */
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white; /* Color blanco del texto del botón */
+    background-color: #333; /* Fondo oscuro del botón */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #555; /* Color al pasar el cursor */
+  }
+  
+  /* Sección de reglas */
+  .rules {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para que el texto sea visible */
+    border-radius: 5px;
+    color: white; /* Color blanco para el texto de las reglas */
+  }
+  

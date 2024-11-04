@@ -1,1 +1,28 @@
-<p>inicio works!</p>
+<div class="inicio-container">
+    <!-- Imagen de fondo -->
+    <div class="background-image"></div>
+  
+    <!-- Contenedor principal de contenido -->
+    <div class="content">
+      <h1>Bienvenido al juego Científicos - Robots</h1>
+  
+      <!-- Botones de navegación -->
+      <button (click)="startGame()">Iniciar Juego</button>
+      <button (click)="toggleRules()">
+        {{ showRules ? 'Ocultar reglas' : 'Mostrar reglas' }}
+      </button>
+  
+      <!-- Sección de reglas (se mostrará/ocultará) -->
+      <div *ngIf="showRules" class="rules">
+        <h2>Reglas del Juego</h2>
+        <p>
+          • El juego consiste en pasar los científicos y robots al segundo laboratorio por medio de la cápsula.
+          <br />• La cápsula puede transportar uno o dos pasajeros, y deben llegar al otro laboratorio.
+          <br />• La cápsula no se puede trasladar vacía al otro laboratorio.
+          <br />• Solo se pueden enviar pasajeros del lado donde se encuentra la cápsula.
+          <br />• No pueden quedar menos Científicos que Robots en algún laboratorio, a menos que los robots queden solos.
+          <br />• Para ganar el juego, debes pasar los 3 científicos y los 3 robots al segundo laboratorio.
+        </p>
+      </div>
+    </div>
+  </div>
