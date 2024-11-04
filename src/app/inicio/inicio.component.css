@@ -50,8 +50,11 @@
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para que el texto sea visible */
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 5px;
     color: white; /* Color blanco para el texto de las reglas */
   }
   
+  .rules li{
+    text-align: left;
+  }
