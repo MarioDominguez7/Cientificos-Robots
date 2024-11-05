@@ -743,43 +743,5 @@ h3 {
     padding: 5px 15px 10px 15px;
     margin-top: 5px;
   }
-
-  .rules:before {
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-  }
-
-  .button-85 {
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 0.6em 1.6em;
-  }
-
-  .button-85:before {
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-  }
-
-  .start-btn span {
-    font-size: 22px;
-    padding: 6px 20px; 
-  }
-
-  .fullscreen-btn {
-    width: 35px; /* Tamaño ajustado para pantallas de menor altura */
-    height: 35px;
-  }
-
-  .fullscreen-btn:hover {
-    width: 45px;
-    height: 45px;
-    overflow: visible;
-  }
-
-  .tooltip {
-    font-size: 0.7em;
-    padding: 4px 8px;
-  }
-
 }
 
