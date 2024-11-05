@@ -10,6 +10,7 @@ export class GameComponent {
   // Estado de los botones
   isSendButtonPressed: boolean = false;
   isBackButtonPressed: boolean = false;
+  isRegresarButtonPressed: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -19,7 +20,7 @@ export class GameComponent {
   }
 
   goBack() {
-    //this.router.navigate(['/']); // Redirige al componente de inicio
+    this.router.navigate(['/']); // Redirige al componente de inicio
   }
 
   // Métodos para manejar los estados de los botones
@@ -38,6 +39,15 @@ export class GameComponent {
 
   onBackButtonMouseUp() {
     this.isBackButtonPressed = false;
+    
+  }
+
+  onRegresarButtonMouseDown() {
+    this.isRegresarButtonPressed = true;
+  }
+
+  onRegresarButtonMouseUp() {
+    this.isRegresarButtonPressed = false;
     this.goBack(); // Llama a la función de volver al soltar el botón
   }
 }

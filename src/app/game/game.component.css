@@ -42,3 +42,25 @@
     width: 120px; /* Cambia este valor según el tamaño deseado */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
   }
+
+  .back-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    overflow: hidden;
+  }
+  
+  .back-btn:hover {
+    width: 60px;
+    height: 60px;
+    overflow: visible;
+  }
