@@ -20,9 +20,32 @@
     background-position: center;
     z-index: -1;
   }
+
+  /* Estilos del botón */
+.btn-enviarrobot {
+  position: absolute;
+  right: 20px; /* Ajusta este valor para moverlo horizontalmente */
+  top: 50%; /* Ajusta este valor para alinearlo verticalmente */
+  transform: translateY(-50%); /* Centra verticalmente */
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-image: url('/assets/sendRobot.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen al tamaño del botón */
+  background-position: center; /* Centra la imagen */
+  border-radius: 5px; /* Opcional: añade bordes redondeados */
+  transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Efecto hover opcional */
+}
   
-  /* Contenedor de contenido */
-  .content {
-    z-index: 1;
-    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
-  }
+/* Contenedor de contenido */
+.content {
+  z-index: 1;
+  color: white; /* Color blanco para garantizar que el contenido principal sea legible */
+}
