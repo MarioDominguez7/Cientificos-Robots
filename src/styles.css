@@ -13,12 +13,13 @@
       }
       
       #playMusic img {
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         padding: 3px;
       }
       
       .music-btn {
+        z-index: 10;
         position: relative;
         display: inline-block;
         margin: 10px;
