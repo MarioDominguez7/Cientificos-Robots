@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'Cientificos-Robots';
   musicPlayer: HTMLAudioElement | null = null;
-  musicIcon: string = 'assets/volume.png'; // Ajusta la ruta
+  musicIcon: string = 'assets/volume.png'; 
 
   constructor() {
     this.initializeMusicPlayer();
@@ -16,11 +16,11 @@ export class AppComponent {
 
   initializeMusicPlayer(): void {
     if (!this.musicPlayer) {
-      this.musicPlayer = new Audio('assets/musicadefondo.mp3'); // Ajusta la ruta
+      this.musicPlayer = new Audio('assets/musicadefondo.mp3'); 
       this.musicPlayer.loop = true;
       this.musicPlayer.volume = 0.5;
       this.musicPlayer.play();
-      this.musicIcon = 'assets/volume-up.png'; // Ajusta la ruta
+      this.musicIcon = 'assets/volume-up.png'; 
     }
   }
 
