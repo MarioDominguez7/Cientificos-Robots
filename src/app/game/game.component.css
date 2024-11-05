@@ -21,7 +21,30 @@
 }
 
 /*--------------------------- BOTONES --------------------------- */
+.button {
+  cursor: pointer;
+  margin: 0 20px;
+  width: 200px;
+  height: 80.39px;
+  top: 982px; 
+  left: 758.951px;
+}
 
+.btnRegresar {
+  width: 200px;
+}
+
+
+/*Antes
+.button {
+  cursor: pointer;
+  margin: 0 10px;
+  width: 120px;
+  height: auto;
+  top: 982px; 
+  left: 758.951px;
+}
+*/
 
 .button-container {
   position: absolute;
@@ -30,19 +53,9 @@
   transform: translateX(-50%);
 }
 
-.button {
-  cursor: pointer;
-  margin: 0 10px;
-  /* Espaciado entre los botones */
-  width: 120px;
-  /* Cambia este valor según el tamaño deseado */
-  height: auto;
-  /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
-}
-
 .back-btn {
-  width: 50px;
-  height: 50px;
+  width: 70px; /*Antes 50px */
+  height: 70px; /*Antes 50px */
   border: none;
   display: flex;
   align-items: center;
@@ -56,11 +69,6 @@
   overflow: hidden;
 }
 
-.back-btn:hover {
-  width: 60px;
-  height: 60px;
-  overflow: visible;
-}
 
 .characters {
   margin-top: 100px;
@@ -72,36 +80,34 @@
 
 .capsule-container {
   position: absolute;
-  bottom: 50px;
+  bottom: 125px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 /* Estilo específico para los botones */
 .capsule {
-  cursor: pointer;
   margin: 0 10px;
-  /* Espaciado entre los botones */
-  width: 145px;
-  /* Cambia este valor según el tamaño deseado */
+  width: 225px;
   height: auto;
-  /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
 }
 
-.button-enviarL {
+ /*Antes
+.capsule-container {
   position: absolute;
-  bottom: 290px;
-  right: 85%;
-  transform: translateY(-50%);
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.button-enviarR {
-  position: absolute;
-  bottom: 290px;
-  left: 85%;
-  transform: translateY(-50%);
-}
+Estilo específico para los botones 
+.capsule {
+  margin: 0 10px;
+  width: 145px;
+  height: auto;
+} */
 
+/* Pantalla de ustedes 
 .optionss {
   margin-top: 100px;
   display: flex;
@@ -109,6 +115,75 @@
   gap: 15px;
   align-items: center;
 }
+
+.button-enviarL, .button-enviarR {
+  position: absolute;
+  bottom: 290px;
+  transform: translateY(-50%);
+}
+
+.button-enviarL {
+  left: 758.951px;
+  width: 150px;
+}
+
+.button-enviarR {
+  left: 758.951px;
+}
+
+.button {
+  cursor: pointer;
+  width: 150px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+ Efecto de escala al presionar 
+.button:active {
+  transform: scale(0.8);
+}
+*/
+
+/* Mi Pantalla */
+.optionss {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.button-enviarL, .button-enviarR {
+  position: absolute;
+  top: 400px;
+  transform: translateY(-50%);
+}
+
+.button-enviarL {
+  margin-left: 60px;
+  right: 85%;
+}
+
+.button-enviarR {
+  left: 85%;
+  margin-right: 60px;
+}
+
+.button-top {
+  cursor: pointer;
+  width: auto;
+  height: 60px;
+  transition: transform 0.2s ease;
+}
+
+.button-top:active {
+  transform: scale(0.8);
+}
+
+.button-spacing {
+  margin-bottom: 20px;
+}
+
 
 /*--------------------------- PERSONAJES --------------------------- */
 /*Pantalla de 1920 x 1080*/
@@ -380,7 +455,7 @@
   transform: translateY(-50%);
 }
 
-/*
+/* Pantalla de ustedes
 .cientifico1Lab1 {
   position: absolute;
   bottom: -10px;

@@ -13,26 +13,14 @@
 
     <div class="optionss">
       <div class="button-enviarL">
-        <img class="button" src="assets/sendCientifico.png" alt="sendCientifico"
-          [src]="isSendCButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'"
-          (mousedown)="onSendCButtonMouseDown()" (mouseup)="onSendCButtonMouseUp()"
-          (mouseleave)="isSendCButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />
-        <img class="button" src="assets/sendRobot.png" alt="sendCientifico"
-          [src]="isSendRButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'"
-          (mousedown)="onSendRButtonMouseDown()" (mouseup)="onSendRButtonMouseUp()"
-          (mouseleave)="isSendRButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />
+        <img class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico" />
+        <img class="button-top" src="assets/sendRobot.png" alt="sendRobot" />
       </div>
       <div class="button-enviarR">
-        <img class="button" src="assets/sendCientifico.png" alt="sendCientifico"
-          [src]="isSendCButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'"
-          (mousedown)="onSendCButtonMouseDown()" (mouseup)="onSendCButtonMouseUp()"
-          (mouseleave)="isSendCButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />
-        <img class="button" src="assets/sendRobot.png" alt="sendCientifico"
-          [src]="isSendRButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'"
-          (mousedown)="onSendRButtonMouseDown()" (mouseup)="onSendRButtonMouseUp()"
-          (mouseleave)="isSendRButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />
+        <img class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico" />
+        <img class="button-top" src="assets/sendRobot.png" alt="sendRobot" />
       </div>
-    </div>
+    </div> 
 
     <div class="capsule-container">
       <img [src]="leftCapsuleState" alt="Cápsula Izquierda" class="capsule" />
@@ -40,6 +28,7 @@
     </div>
 
     <div class="button-container">
+      <!--        PANTALLA DE USTEDES
       <img class="button" src="assets/botonEnviar.png" alt="Enviar"
         [src]="isSendButtonPressed ? 'assets/botonEnviarPressed.png' : 'assets/botonEnviar.png'"
         (mousedown)="onSendButtonMouseDown()" (mouseup)="onSendButtonMouseUp()"
@@ -48,7 +37,18 @@
       <img class="button" src="assets/botonRegresar.png" alt="Regresar"
         [src]="isBackButtonPressed ? 'assets/botonRegresarPressed.png' : 'assets/botonRegresar.png'"
         (mousedown)="onBackButtonMouseDown()" (mouseup)="onBackButtonMouseUp()"
-        (mouseleave)="isBackButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />
+        (mouseleave)="isBackButtonPressed = false" style="top: 982px; left: 758.951px; width: 150px;" />-->
+
+        <!-- MI PANTALLA -->
+         <img class="button" src="assets/botonEnviar.png" alt="Enviar"
+        [src]="isSendButtonPressed ? 'assets/botonEnviarPressed.png' : 'assets/botonEnviar.png'"
+        (mousedown)="onSendButtonMouseDown()" (mouseup)="onSendButtonMouseUp()"
+        (mouseleave)="isSendButtonPressed = false"/>
+
+      <img class="button btnRegresar" src="assets/botonRegresar.png" alt="Regresar"
+        [src]="isBackButtonPressed ? 'assets/botonRegresarPressed.png' : 'assets/botonRegresar.png'"
+        (mousedown)="onBackButtonMouseDown()" (mouseup)="onBackButtonMouseUp()"
+        (mouseleave)="isBackButtonPressed = false"/>
     </div>
 
     <div class="characters">
