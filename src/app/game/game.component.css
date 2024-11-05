@@ -30,15 +30,9 @@
   /* Estilo para el contenedor de botones */
   .button-container {
     position: absolute; /* Mantenerlo absoluto */
-    bottom: 0px; /* Ajusta la distancia desde la parte inferior */
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
     left: 50%; /* Centrar horizontalmente */
     transform: translateX(-50%); /* Centra el contenedor horizontalmente */
-  }
-  button {
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    padding: 0; /* Quitar el relleno extra */
-    cursor: pointer; /* Mostrar el cursor de puntero al pasar sobre el botón */
   }
   
   /* Estilo específico para los botones */

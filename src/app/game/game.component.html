@@ -131,31 +131,27 @@
           </div>
 
         <div class="button-container">
-            <button 
-            (mouseup)="onSendButtonMouseUp()">
             <img 
               class="button"
               src="assets/botonEnviar.png" 
               alt="Enviar"
               [src]="isSendButtonPressed ? 'assets/botonEnviarPressed.png' : 'assets/botonEnviar.png'" 
               (mousedown)="onSendButtonMouseDown()" 
+              (mouseup)="onSendButtonMouseUp()" 
               (mouseleave)="isSendButtonPressed = false" 
               style="top: 982px; left: 758.951px;"
             />
-        </button>
-
-        <button 
-            (mouseup)="onBackButtonMouseUp()">
+            
             <img 
               class="button"
               src="assets/botonRegresar.png" 
               alt="Regresar"
               [src]="isBackButtonPressed ? 'assets/botonRegresarPressed.png' : 'assets/botonRegresar.png'" 
               (mousedown)="onBackButtonMouseDown()" 
+              (mouseup)="onBackButtonMouseUp()" 
               (mouseleave)="isBackButtonPressed = false" 
               style="top: 982px; left: 758.951px; width: 150px;"
             />
-        </button>
           </div>
     </div>
   </div>
