@@ -146,6 +146,230 @@
         transform: translateY(-50%); /* Centra el contenedor horizontalmente */
       }
 
+      .cientifico1Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: -50px; /* Ajusta la distancia desde la parte inferior */
+        left: 92%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+    .robot1Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: -40px; /* Ajusta la distancia desde la parte inferior */
+        left: 85%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: -50px; /* Ajusta la distancia desde la parte inferior */
+        left: 72%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+
+      .robot2Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: -10px; /* Ajusta la distancia desde la parte inferior */
+        left: 65%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 200px; /* Ajusta la distancia desde la parte inferior */
+        left: 70%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Lab2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 125px; /* Ajusta la distancia desde la parte inferior */
+        left: 78%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot1Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+      .robot1Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot1Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot2Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot2Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        right: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico1Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico1Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Cap1Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Cap1Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        right: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot1Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+      .robot1Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot1Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot2Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot2Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 55%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
+        left: 51%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico1Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico1Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Cap2Pos1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 56%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Cap2Pos2{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
+        left: 52%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+
     .characters{
         margin-top: 100px;
         display: flex;
