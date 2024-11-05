@@ -1,48 +1,72 @@
 <div class="inicio-container">
-    <!-- Imagen de fondo -->
-    <div class="background-image"></div>
-    <div class="fullscreen">
-      <button class="fullscreen-btn" (click)="toggleFullScreen()">
-        <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"
-          ></path>
-        </svg>
-        <span class="tooltip">Fullscreen</span>
-      </button>
-    </div>
-    <!-- Contenedor principal de contenido -->
-    <div class="content">
-      <h1>¡Bienvenido al juego Científicos vs Robots!</h1>
-
-      <div class="contenido">
-        
+  <!-- Imagen de fondo -->
+  <div class="background-image"></div>
+  <button id="playMusic" class="music-btn">
+    <span><img id="musicIcon" src="/assets/volume.png" alt="" /></span>
+  </button>
+  <div class="fullscreen">
+    <button class="fullscreen-btn" (click)="toggleFullScreen()">
+      <svg
+        viewBox="0 0 448 512"
+        height="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"
+        ></path>
+      </svg>
+      <span class="tooltip">Fullscreen</span>
+    </button>
+  </div>
+  <!-- Contenedor principal de contenido -->
+  <div class="content">
+    <h1>¡Bienvenido al juego Científicos vs Robots!</h1>
+    <div class="contenido">
       <div class="record">
-        <h2>Récord: <!--{{ record }}--></h2> 
+        <h2>
+          Récord:
+          <!--{{ record }}-->
+        </h2>
       </div>
 
       <!-- Botones de navegación -->
-       <div class="options">
+      <div class="options">
         <div class="border-gradient">
-      <button (click)="startGame()" class='start-btn'><span>Iniciar Juego</span></button>
-    </div>
-      <button (click)="toggleRules()" class="button-85">
-        {{ showRules ? 'Ocultar reglas' : 'Mostrar reglas' }}
-      </button>
-  
-      <!-- Sección de reglas (se mostrará/ocultará) -->
-      <div *ngIf="showRules" class="rules">
-        <h3>Reglas del Juego</h3>
-        <ul>
-          <li>El juego consiste en pasar los científicos y robots al segundo laboratorio por medio de la cápsula.</li>
-          <li>La cápsula puede transportar uno o dos pasajeros, y deben llegar al otro laboratorio.</li>
-          <li>La cápsula no se puede trasladar vacía al otro laboratorio.</li>
-          <li>Solo se pueden enviar pasajeros del lado donde se encuentra la cápsula.</li>
-          <li>No pueden quedar menos Científicos que Robots en algún laboratorio, a menos que los robots queden solos.</li>
-          <li>Para ganar el juego, debes pasar los 3 científicos y los 3 robots al segundo laboratorio.</li>
-        </ul>
+          <button (click)="startGame()" class="start-btn">
+            <span>Iniciar Juego</span>
+          </button>
+        </div>
+        <button (click)="toggleRules()" class="button-85">
+          {{ showRules ? "Ocultar reglas" : "Mostrar reglas" }}
+        </button>
+
+        <!-- Sección de reglas (se mostrará/ocultará) -->
+        <div *ngIf="showRules" class="rules">
+          <h3>Reglas del Juego</h3>
+          <ul>
+            <li>
+              El juego consiste en pasar los científicos y robots al segundo laboratorio por medio de la cápsula.
+            </li>
+            <li>
+              La cápsula puede transportar uno o dos pasajeros, y deben llegar al otro laboratorio.
+            </li>
+            <li>La cápsula no se puede trasladar vacía al otro laboratorio.</li>
+            <li>
+              Solo se pueden enviar pasajeros del lado donde se encuentra la cápsula.
+            </li>
+            <li>
+              No pueden quedar menos Científicos que Robots en algún laboratorio, a menos que los robots queden solos.
+            </li>
+            <li>
+              Para ganar el juego, debes pasar los 3 científicos y los 3 robots al segundo laboratorio.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    
   </div>
+  <div class="credits">
+    <p><b>Created by:</b> Mario Domínguez Figueroa - Joahan Noé Escobedo Martínez - Alinne Samantha Hernández Pérez</p>
   </div>
 </div>
