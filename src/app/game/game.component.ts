@@ -38,7 +38,13 @@ export class GameComponent {
       this.closeLeftCapsule();
       setTimeout(() => {
         this.openRightCapsule();
-      }, 2000);
+      }, 1000);
+    }
+    if (this.isRightCapsuleOpen) { // Solo permitir si la cápsula derecha está abierta
+      this.closeRightCapsule();
+      setTimeout(() => {
+        this.openLeftCapsule();
+      }, 1000);
     }
   }
 
@@ -48,12 +54,6 @@ export class GameComponent {
 
   onBackButtonMouseUp() {
     this.isBackButtonPressed = false;
-    if (this.isRightCapsuleOpen) { // Solo permitir si la cápsula derecha está abierta
-      this.closeRightCapsule();
-      setTimeout(() => {
-        this.openLeftCapsule();
-      }, 2000);
-    }
   }
 
   onRegresarButtonMouseDown() {
@@ -71,7 +71,7 @@ export class GameComponent {
     setTimeout(() => {
       this.leftCapsuleState = 'assets/cerrado1.png';
       this.isLeftCapsuleOpen = false;
-    }, 1000); // Cambiar a cerrada después de 1 segundo
+    }, 250); // Cambiar a cerrada después de 1 segundo
   }
 
   openLeftCapsule() {
@@ -79,7 +79,7 @@ export class GameComponent {
     setTimeout(() => {
       this.leftCapsuleState = 'assets/abierto1.png';
       this.isLeftCapsuleOpen = true;
-    }, 1000);
+    }, 250);
   }
 
   closeRightCapsule() {
@@ -87,7 +87,7 @@ export class GameComponent {
     setTimeout(() => {
       this.rightCapsuleState = 'assets/cerrado2.png';
       this.isRightCapsuleOpen = false;
-    }, 1000); // Cambiar a cerrada después de 1 segundo
+    }, 250); // Cambiar a cerrada después de 1 segundo
   }
 
   openRightCapsule() {
@@ -95,6 +95,6 @@ export class GameComponent {
     setTimeout(() => {
       this.rightCapsuleState = 'assets/abierto2.png';
       this.isRightCapsuleOpen = true;
-    }, 1000);
+    }, 250);
   }
 }

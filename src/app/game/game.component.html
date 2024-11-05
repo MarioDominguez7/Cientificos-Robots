@@ -17,6 +17,53 @@
                 />
           </div>
 
+          <div class="optionss">
+            <div class="button-enviarL">
+              <img 
+                class="button"
+                src="assets/sendCientifico.png" 
+                alt="sendCientifico"
+                [src]="isBackButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'" 
+                (mousedown)="onBackButtonMouseDown()" 
+                (mouseup)="onBackButtonMouseUp()" 
+                (mouseleave)="isBackButtonPressed = false" 
+                style="top: 982px; left: 758.951px; width: 150px;"
+              />
+              <img 
+                class="button"
+                src="assets/sendRobot.png" 
+                alt="sendCientifico"
+                [src]="isBackButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'" 
+                (mousedown)="onBackButtonMouseDown()" 
+                (mouseup)="onBackButtonMouseUp()" 
+                (mouseleave)="isBackButtonPressed = false" 
+                style="top: 982px; left: 758.951px; width: 150px;"
+              />
+            </div>
+            <div class="button-enviarR">
+              <img 
+                class="button"
+                src="assets/sendCientifico.png" 
+                alt="sendCientifico"
+                [src]="isBackButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'" 
+                (mousedown)="onBackButtonMouseDown()" 
+                (mouseup)="onBackButtonMouseUp()" 
+                (mouseleave)="isBackButtonPressed = false" 
+                style="top: 982px; left: 758.951px; width: 150px;"
+              />
+              <img 
+                class="button"
+                src="assets/sendRobot.png" 
+                alt="sendCientifico"
+                [src]="isBackButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'" 
+                (mousedown)="onBackButtonMouseDown()" 
+                (mouseup)="onBackButtonMouseUp()" 
+                (mouseleave)="isBackButtonPressed = false" 
+                style="top: 982px; left: 758.951px; width: 150px;"
+              />
+            </div>
+            </div>
+
           <div class="capsule-container">
             <img 
               [src]="leftCapsuleState" 
@@ -32,8 +79,7 @@
 
         <div class="button-container">
             <button 
-            (mouseup)="onSendButtonMouseUp()" 
-            [disabled]="!isLeftCapsuleOpen">
+            (mouseup)="onSendButtonMouseUp()">
             <img 
               class="button"
               src="assets/botonEnviar.png" 
@@ -46,8 +92,7 @@
         </button>
 
         <button 
-            (mouseup)="onBackButtonMouseUp()" 
-            [disabled]="!isRightCapsuleOpen">
+            (mouseup)="onBackButtonMouseUp()">
             <img 
               class="button"
               src="assets/botonRegresar.png" 

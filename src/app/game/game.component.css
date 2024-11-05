@@ -85,3 +85,25 @@
     width: 120px; /* Cambia este valor según el tamaño deseado */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
   }
+
+  .button-enviarL{
+    position: absolute; /* Mantenerlo absoluto */
+    bottom: 290px; /* Ajusta la distancia desde la parte inferior */
+    right: 85%; /* Centrar horizontalmente */
+    transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+  }
+
+  .button-enviarR{
+    position: absolute; /* Mantenerlo absoluto */
+    bottom: 290px; /* Ajusta la distancia desde la parte inferior */
+    left: 85%; /* Centrar horizontalmente */
+    transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+  }
+
+  .optionss {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    align-items: center;
+    }
