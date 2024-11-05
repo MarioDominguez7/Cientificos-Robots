@@ -71,6 +71,7 @@
     overflow: visible;
   }
 
+
   .capsule-container {
     position: absolute; /* Mantenerlo absoluto */
     bottom: 50px; /* Ajusta la distancia desde la parte inferior */
@@ -82,7 +83,7 @@
   .capsule {
     cursor: pointer;
     margin: 0 10px; /* Espaciado entre los botones */
-    width: 120px; /* Cambia este valor según el tamaño deseado */
+    width: 145px; /* Cambia este valor según el tamaño deseado */
     height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
   }
 
@@ -107,3 +108,55 @@
     gap: 15px; 
     align-items: center;
     }
+
+    .cientifico1Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: -10px; /* Ajusta la distancia desde la parte inferior */
+        right: 94%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+    .robot1Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 70px; /* Ajusta la distancia desde la parte inferior */
+        right: 89%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico2Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 146px; /* Ajusta la distancia desde la parte inferior */
+        right: 74%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+
+      .robot2Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 146px; /* Ajusta la distancia desde la parte inferior */
+        right: 68%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .robot3Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 148px; /* Ajusta la distancia desde la parte inferior */
+        right: 79%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+      .cientifico3Lab1{
+        position: absolute; /* Mantenerlo absoluto */
+        bottom: 130px; /* Ajusta la distancia desde la parte inferior */
+        right: 84%; /* Centrar horizontalmente */
+        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
+      }
+
+    .characters{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+        align-items: center;
+    }
+    
