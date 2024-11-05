@@ -1,8 +1,8 @@
 <div class="inicio-container">
   <!-- Imagen de fondo -->
   <div class="background-image"></div>
-  <button id="playMusic" class="music-btn">
-    <span><img id="musicIcon" src="/assets/volume.png" alt="" /></span>
+  <button id="playMusic" class="music-btn" (click)="toggleMusic()">
+    <span><img id="musicIcon"  [src]="musicIcon" alt="" /></span>
   </button>
   <div class="fullscreen">
     <button class="fullscreen-btn" (click)="toggleFullScreen()">
