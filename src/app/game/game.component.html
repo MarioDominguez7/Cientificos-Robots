@@ -4,11 +4,28 @@
   
     <!-- Contenedor principal de contenido -->
     <div class="content">
-
-      <!-- Botón Enviar robot-->
-      <button class="btn-enviarrobot">----</button>
-      
+        <div class="button-container">
+            <img 
+              class="button"
+              src="assets/botonEnviar.png" 
+              alt="Enviar"
+              [src]="isSendButtonPressed ? 'assets/botonEnviarPressed.png' : 'assets/botonEnviar.png'" 
+              (mousedown)="onSendButtonMouseDown()" 
+              (mouseup)="onSendButtonMouseUp()" 
+              (mouseleave)="isSendButtonPressed = false" 
+              style="top: 982px; left: 758.951px;"
+            />
+            
+            <img 
+              class="button"
+              src="assets/botonRegresar.png" 
+              alt="Regresar"
+              [src]="isBackButtonPressed ? 'assets/botonRegresarPressed.png' : 'assets/botonRegresar.png'" 
+              (mousedown)="onBackButtonMouseDown()" 
+              (mouseup)="onBackButtonMouseUp()" 
+              (mouseleave)="isBackButtonPressed = false" 
+              style="top: 982px; left: 758.951px; width: 150px;"
+            />
+          </div>
     </div>
   </div>
-
-<div class="background-imagegame"></div>

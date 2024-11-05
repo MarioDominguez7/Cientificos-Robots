@@ -20,33 +20,25 @@
     background-position: center;
     z-index: -1;
   }
-
-  /* prueva*/
-  /* Estilos del botón */
-.btn-enviarrobot {
-  position: absolute;
-  right: 20px; /* Ajusta este valor para moverlo horizontalmente */
-  top: 50%; /* Ajusta este valor para alinearlo verticalmente */
-  transform: translateY(-50%); /* Centra verticalmente */
-  padding: 10px 20px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  background-image: url('/assets/sendRobot.png'); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta la imagen al tamaño del botón */
-  background-position: center; /* Centra la imagen */
-  border-radius: 5px; /* Opcional: añade bordes redondeados */
-  transition: background-color 0.3s;
-}
-
-.btn-enviar:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Efecto hover opcional */
-}
   
-/* Contenedor de contenido */
-.content {
-  z-index: 1;
-  color: white; /* Color blanco para garantizar que el contenido principal sea legible */
-}
+  /* Contenedor de contenido */
+  .content {
+    z-index: 1;
+    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
+  }
+
+  /* Estilo para el contenedor de botones */
+  .button-container {
+    position: absolute; /* Mantenerlo absoluto */
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+  }
+  
+  /* Estilo específico para los botones */
+  .button {
+    cursor: pointer;
+    margin: 0 10px; /* Espaciado entre los botones */
+    width: 120px; /* Cambia este valor según el tamaño deseado */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
+  }
