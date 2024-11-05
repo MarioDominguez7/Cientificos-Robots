@@ -1,60 +1,331 @@
-/* Contenedor principal */
+/*--------------------------- FUENTES --------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap");
+
+/*--------------------------- CONTENEDOR PRINCIPAL --------------------------- */
 .inicio-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white; /* Color blanco para el texto */
-    text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  color: white;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+/*--------------------------- CONTENIDO GENERAL --------------------------- */
+.content {
+  margin-top: 100px;
+}
+
+.contenido {
+  margin-top: 80px;
+}
+
+h1 {
+  font-family: "Silkscreen", serif;
+  font-weight: 700;
+  font-style: normal;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(147, 39, 81, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 46px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.content {
+  z-index: 1;
+  color: white;
+}
+
+.rules li {
+  text-align: start;
+}
+
+/*--------------------------- IMAGEN DE FONDO --------------------------- */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/fondoprincipal.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+/*--------------------------- REGLAS --------------------------- */
+.rules {
+  margin-top: 20px;
+  padding: 5px 20px 15px 20px;
+  color: white;
+  background: #111;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.rules:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-rules 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Fondo estático detrás de las reglas */
+.rules:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* Animación del fondo */
+@keyframes glowing-rules {
+  0% {
+    background-position: 0 0;
   }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/*--------------------------- BOTONES --------------------------- */
+.options {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  align-items: center; 
+}
+
+/* Estilos de los botones */
+.button-85 {
+  margin-top: 15px;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 20px;
+  font-family: "Silkscreen", serif;
+  font-weight: 700;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.start-btn{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+  background: none;
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+}
+
+.start-btn span{
+  border: 4px solid rgba(239,172,63,255);
+  color:white;
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-size:24px;
+  text-align: center;
+  text-decoration:none;
+  background: rgb(227,62,78);
+  background: linear-gradient(0deg, rgba(227,62,78,1) 8%, rgba(178,46,66,1) 32%, rgba(146,38,60,1) 84%);
+  display:block;
+  position:relative;
+  padding:10px 30px;
   
-  /* Imagen de fondo */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/fondoprincipal.png'); /* Cambia por la ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: brightness(0.7); /* Oscurece ligeramente el fondo para resaltar el texto */
-  }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
   
-  /* Contenedor de contenido */
-  .content {
-    z-index: 1;
-    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
-  }
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
   
-  /* Estilos de los botones */
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    color: white; /* Color blanco del texto del botón */
-    background-color: #333; /* Fondo oscuro del botón */
-    border: none;
-    border-radius: 5px;
-  }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.start-btn span:active{
+  top:10px;
+  background: rgb(181,51,63);
+background: linear-gradient(0deg, rgba(181,51,63,1) 8%, rgba(131,28,44,1) 32%, rgba(89,17,32,1) 84%);
   
-  button:hover {
-    background-color: #555; /* Color al pasar el cursor */
-  }
-  
-  /* Sección de reglas */
-  .rules {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-radius: 5px;
-    color: white; /* Color blanco para el texto de las reglas */
-  }
-  
-  .rules li{
-    text-align: left;
-  }
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.start-btn:after{
+  content:"";
+  height:100%;
+  width:100%;
+}
+
+.start-btn span:hover {
+  filter: brightness(0.9); 
+}
+
+
+.fullscreen-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  overflow: hidden;
+}
+
+.fullscreen-btn svg {
+  height: 100%;
+  fill: white; 
+}
+
+.fullscreen-btn:hover {
+  width: 60px;
+  height: 60px;
+  overflow: visible;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  background-color: rgba(255, 255, 255, 0.753);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.fullscreen-btn:hover .tooltip {
+  transform: translateY(2.5px);
+  opacity: 1;
+}
