@@ -1,4 +1,4 @@
-.inicio-container {
+.game-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -6,9 +6,10 @@
     height: 100vh;
     color: white; /* Color blanco para el texto */
     text-align: center;
-}
-/* Imagen de fondo */
-.background-imagegame {
+  }
+  
+  /* Imagen de fondo */
+  .background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,5 +19,10 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
-    filter: brightness(0.7); /* Oscurece ligeramente el fondo para resaltar el texto */
+  }
+  
+  /* Contenedor de contenido */
+  .content {
+    z-index: 1;
+    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
   }
