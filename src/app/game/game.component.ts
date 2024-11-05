@@ -17,6 +17,42 @@ export class GameComponent {
   isRightCapsuleOpen: boolean = false;
   isSendCButtonPressed: boolean = false;
   isSendRButtonPressed: boolean = false;
+  robot1lab1Visible: boolean = true;
+  cient1lab1Visible: boolean = true;
+  cient2lab1Visible: boolean = true;
+  robot2lab1Visible: boolean = true;
+  robot3lab1Visible: boolean = true;
+  cient3lab1Visible: boolean = true;
+  robot1lab2Visible: boolean = false;
+  cient1lab2Visible: boolean = false;
+  cient2lab2Visible: boolean = false;
+  robot2lab2Visible: boolean = false;
+  robot3lab2Visible: boolean = false;
+  cient3lab2Visible: boolean = false;
+  robot1Cap1Pos1Visible: boolean = false;
+  cient1Cap1Pos1Visible: boolean = false;
+  cient2Cap1Pos1Visible: boolean = false;
+  robot2Cap1Pos1Visible: boolean = false;
+  robot3Cap1Pos1Visible: boolean = false;
+  cient3Cap1Pos1Visible: boolean = false;
+  robot1Cap1Pos2Visible: boolean = false;
+  cient1Cap1Pos2Visible: boolean = false;
+  cient2Cap1Pos2Visible: boolean = false;
+  robot2Cap1Pos2Visible: boolean = false;
+  robot3Cap1Pos2Visible: boolean = false;
+  cient3Cap1Pos2Visible: boolean = false;
+  robot1Cap2Pos1Visible: boolean = false;
+  cient1Cap2Pos1Visible: boolean = false;
+  cient2Cap2Pos1Visible: boolean = false;
+  robot2Cap2Pos1Visible: boolean = false;
+  robot3Cap2Pos1Visible: boolean = false;
+  cient3Cap2Pos1Visible: boolean = false;
+  robot1Cap2Pos2Visible: boolean = false;
+  cient1Cap2Pos2Visible: boolean = false;
+  cient2Cap2Pos2Visible: boolean = false;
+  robot2Cap2Pos2Visible: boolean = false;
+  robot3Cap2Pos2Visible: boolean = false;
+  cient3Cap2Pos2Visible: boolean = false;
 
   constructor(private router: Router) {}
 
