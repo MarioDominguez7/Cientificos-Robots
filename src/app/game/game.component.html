@@ -4,6 +4,24 @@
   
     <!-- Contenedor principal de contenido -->
     <div class="content">
-      
+        <div class="button-container">
+            <img 
+              src="assets/botonEnviar.png" 
+              alt="Enviar"
+              [src]="isSendButtonPressed ? 'assets/botonEnviarPressed.png' : 'assets/botonEnviar.png'" 
+              (mousedown)="onSendButtonMouseDown()" 
+              (mouseup)="onSendButtonMouseUp()" 
+              (mouseleave)="isSendButtonPressed = false" 
+            />
+            
+            <img 
+              src="assets/botonRegresar.png" 
+              alt="Regresar"
+              [src]="isBackButtonPressed ? 'assets/botonRegresarPressed.png' : 'assets/botonRegresar.png'" 
+              (mousedown)="onBackButtonMouseDown()" 
+              (mouseup)="onBackButtonMouseUp()" 
+              (mouseleave)="isBackButtonPressed = false" 
+            />
+          </div>
     </div>
   </div>
