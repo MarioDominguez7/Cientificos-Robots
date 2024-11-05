@@ -15,6 +15,8 @@ export class GameComponent {
   rightCapsuleState: string = 'assets/cerrado2.png';
   isLeftCapsuleOpen: boolean = true;
   isRightCapsuleOpen: boolean = false;
+  isSendCButtonPressed: boolean = false;
+  isSendRButtonPressed: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -96,5 +98,23 @@ export class GameComponent {
       this.rightCapsuleState = 'assets/abierto2.png';
       this.isRightCapsuleOpen = true;
     }, 250);
+  }
+
+  // Métodos para manejar los estados de los botones
+  onSendCButtonMouseDown() {
+    this.isSendCButtonPressed = true;
+  }
+
+  onSendCButtonMouseUp() {
+    this.isSendCButtonPressed = false;
+  }
+
+  // Métodos para manejar los estados de los botones
+  onSendRButtonMouseDown() {
+    this.isSendRButtonPressed = true;
+  }
+
+  onSendRButtonMouseUp() {
+    this.isSendRButtonPressed = false;
   }
 }
