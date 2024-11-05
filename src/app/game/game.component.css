@@ -1,379 +1,391 @@
+/*--------------------------- CONTENIDO GENERAL --------------------------- */
 .game-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white; /* Color blanco para el texto */
-    text-align: center;
-  }
-  
-  /* Imagen de fondo */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/fondo.png'); /* Cambia por la ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-  }
-  
-  /* Contenedor de contenido */
-  .content {
-    z-index: 1;
-    color: white; /* Color blanco para garantizar que el contenido principal sea legible */
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
 
-  /* Estilo para el contenedor de botones */
-  .button-container {
-    position: absolute; /* Mantenerlo absoluto */
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
-  }
-  
-  /* Estilo específico para los botones */
-  .button {
-    cursor: pointer;
-    margin: 0 10px; /* Espaciado entre los botones */
-    width: 120px; /* Cambia este valor según el tamaño deseado */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
-  }
+/* Imagen de fondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/fondo.png');
+  /* Cambia por la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
 
-  .back-btn {
-    width: 50px;
-    height: 50px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s;
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
-    overflow: hidden;
-  }
-  
-  .back-btn:hover {
-    width: 60px;
-    height: 60px;
-    overflow: visible;
-  }
+/* Contenedor de contenido */
+.content {
+  z-index: 1;
+  color: white;
+  /* Color blanco para garantizar que el contenido principal sea legible */
+}
 
+/*--------------------------- BOTONES --------------------------- */
 
-  .capsule-container {
-    position: absolute; /* Mantenerlo absoluto */
-    bottom: 50px; /* Ajusta la distancia desde la parte inferior */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
-  }
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  /* Estilo específico para los botones */
-  .capsule {
-    cursor: pointer;
-    margin: 0 10px; /* Espaciado entre los botones */
-    width: 145px; /* Cambia este valor según el tamaño deseado */
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
-  }
+.button {
+  cursor: pointer;
+  margin: 0 10px;
+  /* Espaciado entre los botones */
+  width: 120px;
+  /* Cambia este valor según el tamaño deseado */
+  height: auto;
+  /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
+}
 
-  .button-enviarL{
-    position: absolute; /* Mantenerlo absoluto */
-    bottom: 290px; /* Ajusta la distancia desde la parte inferior */
-    right: 85%; /* Centrar horizontalmente */
-    transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-  }
+.back-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  overflow: hidden;
+}
 
-  .button-enviarR{
-    position: absolute; /* Mantenerlo absoluto */
-    bottom: 290px; /* Ajusta la distancia desde la parte inferior */
-    left: 85%; /* Centrar horizontalmente */
-    transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-  }
+.back-btn:hover {
+  width: 60px;
+  height: 60px;
+  overflow: visible;
+}
 
-  .optionss {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    align-items: center;
-    }
+.characters {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
 
-    .cientifico1Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: -10px; /* Ajusta la distancia desde la parte inferior */
-        right: 94%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.capsule-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    .robot1Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 70px; /* Ajusta la distancia desde la parte inferior */
-        right: 89%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+/* Estilo específico para los botones */
+.capsule {
+  cursor: pointer;
+  margin: 0 10px;
+  /* Espaciado entre los botones */
+  width: 145px;
+  /* Cambia este valor según el tamaño deseado */
+  height: auto;
+  /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
+}
 
-      .cientifico2Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 146px; /* Ajusta la distancia desde la parte inferior */
-        right: 74%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.button-enviarL {
+  position: absolute;
+  bottom: 290px;
+  right: 85%;
+  transform: translateY(-50%);
+}
 
+.button-enviarR {
+  position: absolute;
+  bottom: 290px;
+  left: 85%;
+  transform: translateY(-50%);
+}
 
-      .robot2Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 146px; /* Ajusta la distancia desde la parte inferior */
-        right: 68%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.optionss {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
 
-      .robot3Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 148px; /* Ajusta la distancia desde la parte inferior */
-        right: 79%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+/*--------------------------- PERSONAJES --------------------------- */
 
-      .cientifico3Lab1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 130px; /* Ajusta la distancia desde la parte inferior */
-        right: 84%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.cientifico1Lab1 {
+  position: absolute;
+  bottom: -10px;
+  right: 94%;
+  transform: translateY(-50%);
+}
 
-      .cientifico1Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: -50px; /* Ajusta la distancia desde la parte inferior */
-        left: 92%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.robot1Lab1 {
+  position: absolute;
+  bottom: 70px;
+  right: 89%;
+  transform: translateY(-50%);
+}
 
-    .robot1Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: -40px; /* Ajusta la distancia desde la parte inferior */
-        left: 85%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico2Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: -50px; /* Ajusta la distancia desde la parte inferior */
-        left: 72%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.cientifico2Lab1 {
+  position: absolute;
+  bottom: 146px;
+  right: 74%;
+  transform: translateY(-50%);
+}
 
 
-      .robot2Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: -10px; /* Ajusta la distancia desde la parte inferior */
-        left: 65%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.robot2Lab1 {
+  position: absolute;
+  bottom: 146px;
+  right: 68%;
+  transform: translateY(-50%);
+}
 
-      .robot3Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 200px; /* Ajusta la distancia desde la parte inferior */
-        left: 70%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.robot3Lab1 {
+  position: absolute;
+  bottom: 148px;
+  right: 79%;
+  transform: translateY(-50%);
+}
 
-      .cientifico3Lab2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 125px; /* Ajusta la distancia desde la parte inferior */
-        left: 78%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.cientifico3Lab1 {
+  position: absolute;
+  bottom: 130px;
+  right: 84%;
+  transform: translateY(-50%);
+}
 
-      .robot1Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-      .robot1Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.cientifico1Lab2 {
+  position: absolute;
+  bottom: -50px;
+  left: 92%;
+  transform: translateY(-50%);
+}
 
-      .robot1Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.robot1Lab2 {
+  position: absolute;
+  bottom: -40px;
+  left: 85%;
+  transform: translateY(-50%);
+}
 
-      .robot2Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot2Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot3Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot3Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        right: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico1Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico1Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico2Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico2Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico3Cap1Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico3Cap1Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        right: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot1Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-      .robot1Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot1Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot2Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot2Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot3Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 55%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .robot3Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 30px; /* Ajusta la distancia desde la parte inferior */
-        left: 51%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico1Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico1Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico2Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico2Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico3Cap2Pos1{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 56%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
-
-      .cientifico3Cap2Pos2{
-        position: absolute; /* Mantenerlo absoluto */
-        bottom: 25px; /* Ajusta la distancia desde la parte inferior */
-        left: 52%; /* Centrar horizontalmente */
-        transform: translateY(-50%); /* Centra el contenedor horizontalmente */
-      }
+.cientifico2Lab2 {
+  position: absolute;
+  bottom: -50px;
+  left: 72%;
+  transform: translateY(-50%);
+}
 
 
-    .characters{
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px; 
-        align-items: center;
-    }
+.robot2Lab2 {
+  position: absolute;
+  bottom: -10px;
+  left: 65%;
+  transform: translateY(-50%);
+}
+
+.robot3Lab2 {
+  position: absolute;
+  bottom: 200px;
+  left: 70%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Lab2 {
+  position: absolute;
+  bottom: 125px;
+  left: 78%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+
