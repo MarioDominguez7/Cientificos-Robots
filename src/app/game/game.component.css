@@ -25,31 +25,20 @@
   .content {
     z-index: 1;
     color: white; /* Color blanco para garantizar que el contenido principal sea legible */
-    position: relative;
-    display: flex; /* Flexbox para alinear contenido */
-    flex-direction: column; /* Permite que los elementos se apilen verticalmente */
-    justify-content: flex-end; /* Alinea el contenido hacia abajo */
-    height: 100%; /* Asegura que ocupe toda la altura */
   }
 
   /* Estilo para el contenedor de botones */
   .button-container {
-    position: absolute; /* Permite que los botones se posicionen en coordenadas específicas */
-    bottom: 500px; /* Ajusta esta propiedad para colocar el contenedor de botones cerca de la parte inferior */
-    left: 0; /* Alinea el contenedor de botones a la izquierda */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    display: flex; /* Usamos flexbox para alinear los botones */
-    justify-content: center; /* Centra los botones horizontalmente */
+    position: absolute; /* Mantenerlo absoluto */
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
   }
   
   /* Estilo específico para los botones */
-.send-button,
-.back-button {
-  width: 100px; /* Ancho del botón */
-  height: 100px; /* Alto del botón */
-  cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
-}
-
-.send-button {
-  margin-right: 20px; /* Espacio entre los botones */
-}
+  .button {
+    cursor: pointer;
+    margin: 0 10px; /* Espaciado entre los botones */
+    width: 120px; /* Cambia este valor según el tamaño deseado */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
+  }
