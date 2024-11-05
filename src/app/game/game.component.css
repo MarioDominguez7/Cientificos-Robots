@@ -22,6 +22,7 @@
 
 /*--------------------------- BOTONES --------------------------- */
 
+
 .button-container {
   position: absolute;
   bottom: 20px;
@@ -110,7 +111,7 @@
 }
 
 /*--------------------------- PERSONAJES --------------------------- */
-
+/*Pantalla de 1920 x 1080*/
 .cientifico1Lab1 {
   position: absolute;
   bottom: -10px;
@@ -379,3 +380,274 @@
   transform: translateY(-50%);
 }
 
+/*
+.cientifico1Lab1 {
+  position: absolute;
+  bottom: -10px;
+  right: 94%;
+  transform: translateY(-50%);
+}
+
+.robot1Lab1 {
+  position: absolute;
+  bottom: 70px;
+  right: 89%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Lab1 {
+  position: absolute;
+  bottom: 146px;
+  right: 74%;
+  transform: translateY(-50%);
+}
+
+
+.robot2Lab1 {
+  position: absolute;
+  bottom: 146px;
+  right: 68%;
+  transform: translateY(-50%);
+}
+
+.robot3Lab1 {
+  position: absolute;
+  bottom: 148px;
+  right: 79%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Lab1 {
+  position: absolute;
+  bottom: 130px;
+  right: 84%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Lab2 {
+  position: absolute;
+  bottom: -50px;
+  left: 92%;
+  transform: translateY(-50%);
+}
+
+.robot1Lab2 {
+  position: absolute;
+  bottom: -40px;
+  left: 85%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Lab2 {
+  position: absolute;
+  bottom: -50px;
+  left: 72%;
+  transform: translateY(-50%);
+}
+
+
+.robot2Lab2 {
+  position: absolute;
+  bottom: -10px;
+  left: 65%;
+  transform: translateY(-50%);
+}
+
+.robot3Lab2 {
+  position: absolute;
+  bottom: 200px;
+  left: 70%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Lab2 {
+  position: absolute;
+  bottom: 125px;
+  left: 78%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap1Pos1 {
+  position: absolute;
+  bottom: 30px;
+  right: 55%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap1Pos2 {
+  position: absolute;
+  bottom: 30px;
+  right: 51%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap1Pos1 {
+  position: absolute;
+  bottom: 25px;
+  right: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap1Pos2 {
+  position: absolute;
+  bottom: 25px;
+  right: 52%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot1Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot2Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap2Pos1 {
+  position: absolute;
+  bottom: 30px;
+  left: 55%;
+  transform: translateY(-50%);
+}
+
+.robot3Cap2Pos2 {
+  position: absolute;
+  bottom: 30px;
+  left: 51%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico1Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico2Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap2Pos1 {
+  position: absolute;
+  bottom: 25px;
+  left: 56%;
+  transform: translateY(-50%);
+}
+
+.cientifico3Cap2Pos2 {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateY(-50%);
+}
+*/
+
+/*--------------------------- MEDIAS QUERYS --------------------------- */

@@ -572,4 +572,164 @@ h3 {
     text-align: center;
     font-size: 22px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
   }
+  
+  @media (max-height: 870px) {
+  .start-btn {
+    margin: 10px;
+  }
+
+  .content {
+    margin-top: 60px; /* Reduce el margen superior */
+  }
+
+  .contenido {
+    margin-top: 50px; /* Reduce el margen superior */
+  }
+
+  h1 {
+    font-size: 36px; /* Tamaño de fuente más pequeño */
+    padding: 6px 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .rules {
+    font-size: 16px;
+    padding: 5px 15px 10px 15px;
+    margin-top: 5px;
+  }
+
+  .rules:before {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+
+  .button-85 {
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 0.5em 1.5em;
+  }
+
+  .button-85:before {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+
+  .start-btn span {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+
+  .fullscreen-btn {
+    width: 35px; /* Tamaño ajustado para pantallas de menor altura */
+    height: 35px;
+  }
+
+  .fullscreen-btn:hover {
+    width: 45px;
+    height: 45px;
+    overflow: visible;
+  }
+
+  .tooltip {
+    font-size: 0.7em;
+    padding: 4px 8px;
+  }
+
+  .credits {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px; /* Reduce el espacio inferior */
+    text-align: center;
+    font-size: 24px; /* Ajusta el tamaño de fuente */
+  }
 }
+}
+@media (max-height: 950px) {
+  .start-btn {
+    margin: 10px;
+  }
+
+  .content {
+    margin-top: 60px; /* Reduce el margen superior */
+  }
+
+  .contenido {
+    margin-top: 50px; /* Reduce el margen superior */
+  }
+
+  h1 {
+    font-size: 40px; /* Tamaño de fuente más pequeño */
+    padding: 6px 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .rules {
+    font-size: 18px;
+    padding: 5px 15px 10px 15px;
+    margin-top: 5px;
+  }
+
+  .rules:before {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+
+  .button-85 {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 0.6em 1.6em;
+  }
+
+  .button-85:before {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+
+  .start-btn span {
+    font-size: 22px;
+    padding: 6px 20px; 
+  }
+
+  .fullscreen-btn {
+    width: 35px; /* Tamaño ajustado para pantallas de menor altura */
+    height: 35px;
+  }
+
+  .fullscreen-btn:hover {
+    width: 45px;
+    height: 45px;
+    overflow: visible;
+  }
+
+  .tooltip {
+    font-size: 0.7em;
+    padding: 4px 8px;
+  }
+
+  .credits {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px; /* Reduce el espacio inferior */
+    text-align: center;
+    font-size: 24px; /* Ajusta el tamaño de fuente */
+  }
+}
+
