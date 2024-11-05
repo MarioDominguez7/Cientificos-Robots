@@ -30,9 +30,15 @@
   /* Estilo para el contenedor de botones */
   .button-container {
     position: absolute; /* Mantenerlo absoluto */
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    bottom: 0px; /* Ajusta la distancia desde la parte inferior */
     left: 50%; /* Centrar horizontalmente */
     transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+  }
+  button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Quitar el relleno extra */
+    cursor: pointer; /* Mostrar el cursor de puntero al pasar sobre el botón */
   }
   
   /* Estilo específico para los botones */
@@ -63,4 +69,19 @@
     width: 60px;
     height: 60px;
     overflow: visible;
+  }
+
+  .capsule-container {
+    position: absolute; /* Mantenerlo absoluto */
+    bottom: 50px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+  }
+
+  /* Estilo específico para los botones */
+  .capsule {
+    cursor: pointer;
+    margin: 0 10px; /* Espaciado entre los botones */
+    width: 120px; /* Cambia este valor según el tamaño deseado */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción de la imagen */
   }
