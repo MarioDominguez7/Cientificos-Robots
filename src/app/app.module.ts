@@ -7,13 +7,15 @@ import { GameComponent } from './game/game.component';
 import { RulesComponent } from './rules/rules.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { GameStateService } from './game-state.service';
+import { GameoverComponent } from './gameover/gameover.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     RulesComponent,
-    InicioComponent
+    InicioComponent,
+    GameoverComponent
   ],
   imports: [
     BrowserModule,

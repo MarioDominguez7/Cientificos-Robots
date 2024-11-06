@@ -875,9 +875,8 @@ export class GameComponent {
     } else if ((this.lab1Cientificos < this.lab1Robots && this.lab1Cientificos > 0) ||
       (this.lab2Cientificos < this.lab2Robots && this.lab2Cientificos > 0)) {
       // Lógica para mostrar que el jugador ha perdido
-      alert('¡Has perdido!\n¡Sigue intentando!');
+      this.router.navigate(['/gameover']); // Redirige a la pantalla de game over
       this.reiniciarJuego();
-      this.goBack();
     }
   }
 }
