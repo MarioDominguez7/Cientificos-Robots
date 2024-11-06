@@ -857,14 +857,14 @@ export class GameComponent {
     return true;
   }
 
-
   // Método para verificar si el juego ha terminado (ganador o game over)
   verificarGanador() {
     if (this.lab2Cientificos === 3 && this.lab2Robots === 3) {
       // Lógica para mostrar que el jugador ha ganado
       this.record = this.datosService.getRecord();
       if(this.movimientos < this.record || this.record === 0){
-        alert('¡Has ganado!\n\nNuevo Record: ' + this.record + '\n\n¡Sigue jugando!');
+        alert('¡Has ganado!\n\nNuevo Record: ' + this.movimientos + '\n\n¡Sigue jugando!');
+        this.datosService.setRecord(this.movimientos);
         this.reiniciarJuego();
         this.goBack();
       }else{
