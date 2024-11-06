@@ -84,10 +84,7 @@ export class GameComponent {
     this.isSendButtonPressed = false;
     if (this.isLeftCapsuleOpen && this.capsule.length > 0) { // Solo permitir si la cápsula izquierda está abierta
       this.enviarCapsula();
-      this.closeLeftCapsule();
-      setTimeout(() => {
-        this.openRightCapsule();
-      }, 1000);
+
     }
     if (this.isRightCapsuleOpen && this.capsule.length > 0) { // Solo permitir si la cápsula derecha está abierta
       this.enviarCapsula();
@@ -220,7 +217,7 @@ export class GameComponent {
 
   moverACapsula(tipo: string) {
     if (this.capsule.length < 2) {
-      if (this.leftCapsuleState === 'assets/abierto1.png') {
+      if (this.isLeftCapsuleOpen) {
         // Lógica para añadir un científico a la cápsula
         if (tipo === 'cientifico' && this.lab1Cientificos > 0) {
           this.lab1Cientificos--;
@@ -284,7 +281,7 @@ export class GameComponent {
             }
           }
         }
-      } else if (this.rightCapsuleState === 'assets/abierto2.png') {
+      } else if (this.isRightCapsuleOpen) {
         if (tipo === 'cientifico' && this.lab2Cientificos > 0) {
           this.lab2Cientificos--;
           this.capsule.push('cientifico');
@@ -353,7 +350,7 @@ export class GameComponent {
 
   regresarALaboratorio(tipo: string) {
     if (this.capsule.length > 0) {
-      if (this.leftCapsuleState === 'assets/abierto1.png') {
+      if (this.isLeftCapsuleOpen) {
         // Lógica para regresar un científico al laboratorio
         if (tipo === 'cientifico') {
           // Verificar si hay algún científico en la cápsula y removerlo de la primera posición ocupada
@@ -415,7 +412,7 @@ export class GameComponent {
             this.capsule.splice(index, 1);
           }
         }
-      } else if (this.rightCapsuleState === 'assets/abierto2.png') {
+      } else if (this.isRightCapsuleOpen) {
         // Lógica para regresar un científico al laboratorio
         if (tipo === 'cientifico') {
           // Verificar si hay algún científico en la cápsula y removerlo de la primera posición ocupada
@@ -489,9 +486,359 @@ export class GameComponent {
       if (this.isLeftCapsuleOpen) {
         this.lab2Cientificos += this.capsule.filter(x => x === 'cientifico').length;
         this.lab2Robots += this.capsule.filter(x => x === 'robot').length;
+
+        this.capsule.forEach((element, index) => {
+          // Determinamos la visibilidad en capsula2 según la posición en capsula1
+          if (element === 'cientifico') {
+            if (this.cient1Cap1Pos1Visible) {
+              this.cient1Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient1Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient1Cap2Pos1Visible = false;
+                    this.cient1lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+
+            } else if (this.cient1Cap1Pos2Visible) {
+              this.cient1Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient1Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient1Cap2Pos2Visible = false;
+                    this.cient1lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+
+            } else if (this.cient2Cap1Pos1Visible) {
+              this.cient2Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient2Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient2Cap2Pos1Visible = false;
+                    this.cient2lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient2Cap1Pos2Visible) {
+              this.cient2Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient2Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient2Cap2Pos2Visible = false;
+                    this.cient2lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient3Cap1Pos1Visible) {
+              this.cient3Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient3Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient3Cap2Pos1Visible = false;
+                    this.cient3lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient3Cap1Pos2Visible) {
+              this.cient3Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.cient3Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient3Cap2Pos2Visible = false;
+                    this.cient3lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            }
+          } else if (element === 'robot') {
+            if (this.robot1Cap1Pos1Visible) {
+              this.robot1Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot1Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot1Cap2Pos1Visible = false;
+                    this.robot1lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot1Cap1Pos2Visible) {
+              this.robot1Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot1Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot1Cap2Pos2Visible = false;
+                    this.robot1lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot2Cap1Pos1Visible) {
+              this.robot2Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot2Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot2Cap2Pos1Visible = false;
+                    this.robot2lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot2Cap1Pos2Visible) {
+              this.robot2Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot2Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot2Cap2Pos2Visible = false;
+                    this.robot2lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot3Cap1Pos1Visible) {
+              this.robot3Cap1Pos1Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot3Cap2Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot3Cap2Pos1Visible = false;
+                    this.robot3lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot3Cap1Pos2Visible) {
+              this.robot3Cap1Pos2Visible = false;
+              this.closeLeftCapsule();
+              setTimeout(() => {
+                this.openRightCapsule();
+                setTimeout(() => {
+                  this.robot3Cap2Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot3Cap2Pos2Visible = false;
+                    this.robot3lab2Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }
+          }
+        });
       } else {
         this.lab1Cientificos += this.capsule.filter(x => x === 'cientifico').length;
         this.lab1Robots += this.capsule.filter(x => x === 'robot').length;
+
+        this.capsule.forEach((element, index) => {
+          // Determinamos la visibilidad en capsula2 según la posición en capsula1
+          if (element === 'cientifico') {
+            if (this.cient1Cap2Pos1Visible) {
+              this.cient1Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient1Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient1Cap1Pos1Visible = false;
+                    this.cient1lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+
+            } else if (this.cient1Cap2Pos2Visible) {
+              this.cient1Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient1Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient1Cap1Pos2Visible = false;
+                    this.cient1lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+
+            } else if (this.cient2Cap2Pos1Visible) {
+              this.cient2Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient2Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient2Cap1Pos1Visible = false;
+                    this.cient2lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient2Cap2Pos2Visible) {
+              this.cient2Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient2Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient2Cap1Pos2Visible = false;
+                    this.cient2lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient3Cap2Pos1Visible) {
+              this.cient3Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient3Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.cient3Cap1Pos1Visible = false;
+                    this.cient3lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            } else if (this.cient3Cap2Pos2Visible) {
+              this.cient3Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.cient3Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.cient3Cap1Pos2Visible = false;
+                    this.cient3lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+
+              }, 1000);
+
+            }
+          } else if (element === 'robot') {
+            if (this.robot1Cap2Pos1Visible) {
+              this.robot1Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot1Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot1Cap1Pos1Visible = false;
+                    this.robot1lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot1Cap2Pos2Visible) {
+              this.robot1Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot1Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot1Cap1Pos2Visible = false;
+                    this.robot1lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot2Cap2Pos1Visible) {
+              this.robot2Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot2Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot2Cap1Pos1Visible = false;
+                    this.robot2lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot2Cap2Pos2Visible) {
+              this.robot2Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot2Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot2Cap1Pos2Visible = false;
+                    this.robot2lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot3Cap2Pos1Visible) {
+              this.robot3Cap2Pos1Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot3Cap1Pos1Visible = true;
+                  setTimeout(() => {
+                    this.robot3Cap1Pos1Visible = false;
+                    this.robot3lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            } else if (this.robot3Cap2Pos2Visible) {
+              this.robot3Cap2Pos2Visible = false;
+              this.closeRightCapsule();
+              setTimeout(() => {
+                this.openLeftCapsule();
+                setTimeout(() => {
+                  this.robot3Cap1Pos2Visible = true;
+                  setTimeout(() => {
+                    this.robot3Cap1Pos2Visible = false;
+                    this.robot3lab1Visible = true;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }
+          }
+        });
       }
       this.capsule = []; // Vacía la cápsula después de enviar
       this.verificarGanador();
