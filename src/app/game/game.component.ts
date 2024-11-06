@@ -842,10 +842,8 @@ export class GameComponent {
           }
         });
       }
-      setTimeout(() => {
       this.capsule = []; // Vacía la cápsula después de enviar
       this.verificarGanador();
-      }, 2000);
     }
   }
 
