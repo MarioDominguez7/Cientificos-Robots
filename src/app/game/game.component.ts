@@ -863,13 +863,12 @@ export class GameComponent {
       // Lógica para mostrar que el jugador ha ganado
       this.record = this.datosService.getRecord();
       if (this.movimientos < this.record || this.record === 0) {
-        this.datosService.setRecord(this.movimientos); // Guarda el nuevo récord
-        this.router.navigate(['/win']); // Redirige a la pantalla de win
+        this.datosService.setRecord(this.movimientos); 
+        this.router.navigate(['/win']); 
         this.reiniciarJuego();
       } else {
-        alert('¡Has ganado!\n¡Felicidades!');
+        this.router.navigate(['/win']); 
         this.reiniciarJuego();
-        this.goBack();
       }
 
     } else if ((this.lab1Cientificos < this.lab1Robots && this.lab1Cientificos > 0) ||
