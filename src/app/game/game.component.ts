@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router';
+import { GameStateService } from '../game-state.service';
 
 @Component({
   selector: 'app-game',
@@ -13,6 +14,7 @@ export class GameComponent {
   lab2Cientificos: number = 0;
   lab2Robots: number = 0;
   movimientos: number = 0;
+  record: number = 0;
 
   // Estado de la cápsula
   capsule: string[] = [];
@@ -64,7 +66,7 @@ export class GameComponent {
   robot3Cap2Pos2Visible: boolean = false;
   cient3Cap2Pos2Visible: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private datosService: GameStateService) { }
 
   // Métodos para manejar los eventos de clic
   send() {
@@ -845,7 +847,7 @@ export class GameComponent {
     }
   }
 
-  // Método para validar el envío de la cápsula
+  //Método para validar el envío de la cápsula
   validarEnvio(): boolean {
     if (this.capsule.length < 1 || this.capsule.length > 2) {
       return false;
@@ -855,15 +857,28 @@ export class GameComponent {
     return true;
   }
 
+
   // Método para verificar si el juego ha terminado (ganador o game over)
   verificarGanador() {
     if (this.lab2Cientificos === 3 && this.lab2Robots === 3) {
       // Lógica para mostrar que el jugador ha ganado
+      this.record = this.datosService.getRecord();
+      if(this.movimientos < this.record || this.record === 0){
+        alert('¡Has ganado!\n\nNuevo Record: ' + this.record + '\n\n¡Sigue jugando!');
+        this.reiniciarJuego();
+        this.goBack();
+      }else{
+        alert('¡Has ganado!\n¡Felicidades!');
+        this.reiniciarJuego();
+        this.goBack();
+      }
 
     } else if ((this.lab1Cientificos < this.lab1Robots && this.lab1Cientificos > 0) ||
       (this.lab2Cientificos < this.lab2Robots && this.lab2Cientificos > 0)) {
       // Lógica para mostrar que el jugador ha perdido
-
+      alert('¡Has perdido!\n¡Sigue intentando!');
+      this.reiniciarJuego();
+      this.goBack();
     }
   }
 }

@@ -10,7 +10,9 @@
         (mousedown)="onRegresarButtonMouseDown()" (mouseup)="onRegresarButtonMouseUp()"
         (mouseleave)="isRegresarButtonPressed = false" />
     </div>
-
+    <div class="movimientos-container">
+      <h2>No. Movimientos: {{ movimientos }}</h2>
+    </div>
     <div class="optionss">
       <div class="button-enviarL">
         <img id="sendCientificoLab1" class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico"[src]="isSendCButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'"

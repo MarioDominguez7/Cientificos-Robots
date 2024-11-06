@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { RulesComponent } from './rules/rules.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { GameStateService } from './game-state.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { InicioComponent } from './inicio/inicio.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GameStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

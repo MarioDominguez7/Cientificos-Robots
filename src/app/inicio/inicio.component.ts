@@ -1,19 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router'; // Importa Router
+import { GameStateService } from '../game-state.service';
+
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit {
   showRules: boolean = false;
 
   record: number = 0; // Inicializa el récord
 
-  constructor(private router: Router) {} // Inyecta Router
+  constructor(private router: Router, private datosService: GameStateService) {} // Inyecta Router
+
+  ngOnInit() {
+    this.recordActual(); // Llama a la función para cargar el récord al inicio
+  }
+
+  recordActual(){
+    this.record = this.datosService.getRecord();
+  }
+ 
 
   startGame() {
+    this.datosService.setRecord(this.record); 
     this.router.navigate(['/game']); // Redirige al componente de juego
   }
 
