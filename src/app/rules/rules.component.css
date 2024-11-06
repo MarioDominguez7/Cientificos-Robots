@@ -1,0 +1,119 @@
+/*--------------------------- CONTENIDO GENERAL --------------------------- */
+.inicio-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    color: white;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    z-index: 1;
+  }
+/* Imagen de fondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/Youwin.png");
+  /* Cambia por la ruta de tu imagen */
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+
+h2 {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    background-color: #3a4176;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+  }
+
+.contenido {
+    margin-top: 80px;
+  }
+
+/*--------------------------- BOTONES --------------------------- */
+.options {
+  position: absolute;
+  bottom: 70px;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.start-btn {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.start-btn span {
+  border: 4px solid rgb(84, 93, 170);
+  color: white;
+  font-family: "Silkscreen", serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  background: rgb(84, 93, 170);
+  background: linear-gradient(
+    0deg,
+    rgba(84, 93, 170, 1) 2%,
+    rgba(125, 116, 181, 1) 40%,
+    rgba(240, 206, 222, 1) 100%
+  );
+  display: block;
+  position: relative;
+  padding: 10px 30px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 rgb(84, 93, 170);
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 rgb(84, 93, 170);
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 rgb(84, 93, 170);
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.start-btn span:active {
+  top: 10px;
+  background: rgb(55, 61, 113);
+  background: linear-gradient(
+    0deg,
+    rgba(55, 61, 113, 1) 2%,
+    rgba(71, 65, 111, 1) 40%,
+    rgba(180, 146, 162, 1) 100%
+  );
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 rgb(84, 93, 170);
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 rgb(84, 93, 170);
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 rgb(84, 93, 170);
+}
+
+.start-btn:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.start-btn span:hover {
+  filter: brightness(0.9);
+}

@@ -863,10 +863,9 @@ export class GameComponent {
       // Lógica para mostrar que el jugador ha ganado
       this.record = this.datosService.getRecord();
       if (this.movimientos < this.record || this.record === 0) {
-        alert('¡Has ganado!\n\nNuevo Record: ' + this.movimientos + '\n\n¡Sigue jugando!');
-        this.datosService.setRecord(this.movimientos);
+        this.datosService.setRecord(this.movimientos); // Guarda el nuevo récord
+        this.router.navigate(['/win']); // Redirige a la pantalla de win
         this.reiniciarJuego();
-        this.goBack();
       } else {
         alert('¡Has ganado!\n¡Felicidades!');
         this.reiniciarJuego();

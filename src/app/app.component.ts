@@ -1,40 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { AudioService } from './audio.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Cientificos-Robots';
-  musicPlayer: HTMLAudioElement | null = null;
-  musicIcon: string = 'assets/volume.png'; 
+  musicIcon: string = 'assets/volume.png';
 
-  constructor() {
-    this.initializeMusicPlayer();
-  }
+  constructor(private audioService: AudioService) {}
 
-  initializeMusicPlayer(): void {
-    if (!this.musicPlayer) {
-      this.musicPlayer = new Audio('assets/musicadefondo.mp3'); 
-      this.musicPlayer.loop = true;
-      this.musicPlayer.volume = 0.5;
-      this.musicPlayer.play();
-      this.musicIcon = 'assets/volume-up.png'; 
-    }
+  ngOnInit(): void {
+    this.audioService.playBackgroundMusic();
+    this.updateMusicIcon();
   }
 
   toggleMusic(): void {
-    console.log('Button clicked');
-    if (this.musicPlayer) {
-      if (this.musicPlayer.paused) {
-        this.musicPlayer.play();
-        this.musicIcon = 'assets/volume-up.png';
-      } else {
-        this.musicPlayer.pause();
-        this.musicIcon = 'assets/volume.png';
-      }
+    this.audioService.toggleBackgroundMusic();
+    this.updateMusicIcon();
+  }
+
+  private updateMusicIcon(): void {
+    if (this.audioService.isBackgroundMusicPlaying()) {
+      this.musicIcon = 'assets/volume-up.png';
+    } else {
+      this.musicIcon = 'assets/volume.png';
     }
+  }
+
+  playWinMusic(): void {
+    this.audioService.playWinMusic();
+    this.musicIcon = 'assets/volume-up.png';
   }
 }
 
