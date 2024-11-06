@@ -506,8 +506,10 @@ export class GameComponent {
         });
       }
       Promise.all(animacionPromesas).then(() => {
-      this.capsule = []; // Vacía la cápsula después de enviar
-      this.verificarGanador();
+        setTimeout(() => {
+          this.capsule = []; // Vacía la cápsula después de enviar
+          this.verificarGanador();
+        }, 1000);
       });
     }
   }
@@ -525,7 +527,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient1Cap2Pos1Visible = false;
                 this.cient1lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -540,7 +542,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient1Cap2Pos2Visible = false;
                 this.cient1lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -555,7 +557,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient2Cap2Pos1Visible = false;
                 this.cient2lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -571,7 +573,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient2Cap2Pos2Visible = false;
                 this.cient2lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -587,7 +589,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient3Cap2Pos1Visible = false;
                 this.cient3lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -603,7 +605,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient3Cap2Pos2Visible = false;
                 this.cient3lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -621,7 +623,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot1Cap2Pos1Visible = false;
                 this.robot1lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -635,7 +637,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot1Cap2Pos2Visible = false;
                 this.robot1lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -649,7 +651,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot2Cap2Pos1Visible = false;
                 this.robot2lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -663,7 +665,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot2Cap2Pos2Visible = false;
                 this.robot2lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -677,7 +679,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot3Cap2Pos1Visible = false;
                 this.robot3lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -691,7 +693,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot3Cap2Pos2Visible = false;
                 this.robot3lab2Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -715,7 +717,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient1Cap1Pos1Visible = false;
                 this.cient1lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -730,7 +732,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient1Cap1Pos2Visible = false;
                 this.cient1lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -745,7 +747,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient2Cap1Pos1Visible = false;
                 this.cient2lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -761,7 +763,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient2Cap1Pos2Visible = false;
                 this.cient2lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -777,7 +779,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient3Cap1Pos1Visible = false;
                 this.cient3lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -793,7 +795,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.cient3Cap1Pos2Visible = false;
                 this.cient3lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
 
@@ -811,7 +813,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot1Cap1Pos1Visible = false;
                 this.robot1lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -825,7 +827,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot1Cap1Pos2Visible = false;
                 this.robot1lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -839,7 +841,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot2Cap1Pos1Visible = false;
                 this.robot2lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -853,7 +855,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot2Cap1Pos2Visible = false;
                 this.robot2lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -867,7 +869,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot3Cap1Pos1Visible = false;
                 this.robot3lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -881,7 +883,7 @@ export class GameComponent {
               setTimeout(() => {
                 this.robot3Cap1Pos2Visible = false;
                 this.robot3lab1Visible = true;
-                resolve(); 
+                resolve();
               }, 1000);
             }, 1000);
           }, 1000);
@@ -908,12 +910,12 @@ export class GameComponent {
     if (this.lab2Cientificos === 3 && this.lab2Robots === 3) {
       // Lógica para mostrar que el jugador ha ganado
       this.record = this.datosService.getRecord();
-      if(this.movimientos < this.record || this.record === 0){
+      if (this.movimientos < this.record || this.record === 0) {
         alert('¡Has ganado!\n\nNuevo Record: ' + this.movimientos + '\n\n¡Sigue jugando!');
         this.datosService.setRecord(this.movimientos);
         this.reiniciarJuego();
         this.goBack();
-      }else{
+      } else {
         alert('¡Has ganado!\n¡Felicidades!');
         this.reiniciarJuego();
         this.goBack();
