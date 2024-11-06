@@ -13,12 +13,20 @@
 
     <div class="optionss">
       <div class="button-enviarL">
-        <img id="sendCientificoLab1" class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico" />
-        <img id="sendRobotLab1" class="button-top" src="assets/sendRobot.png" alt="sendRobot" />
+        <img id="sendCientificoLab1" class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico"[src]="isSendCButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'"
+        (mousedown)="onSendCButtonMouseDown()" (mouseup)="onSendCButtonMouseUp()"
+        (mouseleave)="isSendCButtonPressed = false" />
+        <img id="sendRobotLab1" class="button-top" src="assets/sendRobot.png" alt="sendRobot" [src]="isSendRButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'"
+        (mousedown)="onSendRButtonMouseDown()" (mouseup)="onSendRButtonMouseUp()"
+        (mouseleave)="isSendRButtonPressed = false"/>
       </div>
       <div class="button-enviarR">
-        <img id="sendCientificoLab2" class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico" />
-        <img id="sendRobotLab1" class="button-top" src="assets/sendRobot.png" alt="sendRobot" />
+        <img id="sendCientificoLab2" class="button-top button-spacing" src="assets/sendCientifico.png" alt="sendCientifico" [src]="isSendCButtonPressed ? 'assets/sendCientificoPressed.png' : 'assets/sendCientifico.png'"
+        (mousedown)="onSendCButtonMouseDown()" (mouseup)="onSendCButtonMouseUp()"
+        (mouseleave)="isSendCButtonPressed = false" />
+        <img id="sendRobotLab2" class="button-top" src="assets/sendRobot.png" alt="sendRobot" [src]="isSendRButtonPressed ? 'assets/sendRobotPressed.png' : 'assets/sendRobot.png'"
+        (mousedown)="onSendRButtonMouseDown()" (mouseup)="onSendRButtonMouseUp()"
+        (mouseleave)="isSendRButtonPressed = false"/>
       </div>
     </div> 
 

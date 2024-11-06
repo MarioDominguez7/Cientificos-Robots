@@ -64,7 +64,7 @@ export class GameComponent {
   robot3Cap2Pos2Visible: boolean = false;
   cient3Cap2Pos2Visible: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   // Métodos para manejar los eventos de clic
   send() {
@@ -82,13 +82,15 @@ export class GameComponent {
 
   onSendButtonMouseUp() {
     this.isSendButtonPressed = false;
-    if (this.isLeftCapsuleOpen) { // Solo permitir si la cápsula izquierda está abierta
+    if (this.isLeftCapsuleOpen && this.capsule.length > 0) { // Solo permitir si la cápsula izquierda está abierta
+      this.enviarCapsula();
       this.closeLeftCapsule();
       setTimeout(() => {
         this.openRightCapsule();
       }, 1000);
     }
-    if (this.isRightCapsuleOpen) { // Solo permitir si la cápsula derecha está abierta
+    if (this.isRightCapsuleOpen && this.capsule.length > 0) { // Solo permitir si la cápsula derecha está abierta
+      this.enviarCapsula();
       this.closeRightCapsule();
       setTimeout(() => {
         this.openLeftCapsule();
@@ -102,6 +104,7 @@ export class GameComponent {
 
   onBackButtonMouseUp() {
     this.isBackButtonPressed = false;
+    this.regresarALaboratorio(this.capsule[this.capsule.length - 1] as string);
   }
 
   onRegresarButtonMouseDown() {
@@ -153,6 +156,7 @@ export class GameComponent {
 
   onSendCButtonMouseUp() {
     this.isSendCButtonPressed = false;
+    this.moverACapsula("cientifico");
   }
 
   // Métodos para manejar los estados de los botones
@@ -162,6 +166,7 @@ export class GameComponent {
 
   onSendRButtonMouseUp() {
     this.isSendRButtonPressed = false;
+    this.moverACapsula("robot");
   }
 
 
@@ -215,22 +220,267 @@ export class GameComponent {
 
   moverACapsula(tipo: string) {
     if (this.capsule.length < 2) {
-      if (tipo === 'cientifico' && this.lab1Cientificos > 0) {
-        this.lab1Cientificos--;
-        this.capsule.push('cientifico');
-        this.cient1lab1Visible = false; 
-        // Actualiza la visibilidad del científico
+      if (this.leftCapsuleState === 'assets/abierto1.png') {
+        // Lógica para añadir un científico a la cápsula
+        if (tipo === 'cientifico' && this.lab1Cientificos > 0) {
+          this.lab1Cientificos--;
+          this.capsule.push('cientifico');
 
+          if (this.cient1lab1Visible) {
+            this.cient1lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.cient1Cap1Pos1Visible = true;  // Coloca en posición 1 si está libre
+            } else {
+              this.cient1Cap1Pos2Visible = true;  // Coloca en posición 2 si la 1 está ocupada
+            }
+          } else if (this.cient2lab1Visible) {
+            this.cient2lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.cient2Cap1Pos1Visible = true;
+            } else {
+              this.cient2Cap1Pos2Visible = true;
+            }
+          } else if (this.cient3lab1Visible) {
+            this.cient3lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.cient3Cap1Pos1Visible = true;
+            } else {
+              this.cient3Cap1Pos2Visible = true;
+            }
+          }
+        }
 
-      } else if (tipo === 'robot' && this.lab1Robots > 0) {
-        this.lab1Robots--;
-        this.capsule.push('robot');
-        this.robot1lab1Visible = false; 
-        // Actualiza la visibilidad del robot
+        // Lógica para añadir un robot a la cápsula
+        else if (tipo === 'robot' && this.lab1Robots > 0) {
+          this.lab1Robots--;
+          this.capsule.push('robot');
 
+          if (this.robot1lab1Visible) {
+            this.robot1lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.robot1Cap1Pos1Visible = true;  // Coloca en posición 1 si está libre
+            } else {
+              this.robot1Cap1Pos2Visible = true;  // Coloca en posición 2 si la 1 está ocupada
+            }
+          } else if (this.robot2lab1Visible) {
+            this.robot2lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.robot2Cap1Pos1Visible = true;
+            } else {
+              this.robot2Cap1Pos2Visible = true;
+            }
+          } else if (this.robot3lab1Visible) {
+            this.robot3lab1Visible = false;
+            if (!this.cient1Cap1Pos1Visible && !this.cient2Cap1Pos1Visible && !this.cient3Cap1Pos1Visible &&
+              !this.robot1Cap1Pos1Visible && !this.robot2Cap1Pos1Visible && !this.robot3Cap1Pos1Visible) {
+              this.robot3Cap1Pos1Visible = true;
+            } else {
+              this.robot3Cap1Pos2Visible = true;
+            }
+          }
+        }
+      } else if (this.rightCapsuleState === 'assets/abierto2.png') {
+        if (tipo === 'cientifico' && this.lab2Cientificos > 0) {
+          this.lab2Cientificos--;
+          this.capsule.push('cientifico');
+
+          if (this.cient1lab2Visible) {
+            this.cient1lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.cient1Cap2Pos1Visible = true;  // Coloca en posición 1 si está libre
+            } else {
+              this.cient1Cap2Pos2Visible = true;  // Coloca en posición 2 si la 1 está ocupada
+            }
+          } else if (this.cient2lab2Visible) {
+            this.cient2lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.cient2Cap2Pos1Visible = true;
+            } else {
+              this.cient2Cap2Pos2Visible = true;
+            }
+          } else if (this.cient3lab2Visible) {
+            this.cient3lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.cient3Cap2Pos1Visible = true;
+            } else {
+              this.cient3Cap2Pos2Visible = true;
+            }
+          }
+        }
+
+        // Lógica para añadir un robot a la cápsula
+        else if (tipo === 'robot' && this.lab2Robots > 0) {
+          this.lab2Robots--;
+          this.capsule.push('robot');
+
+          if (this.robot1lab2Visible) {
+            this.robot1lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.robot1Cap2Pos1Visible = true;  // Coloca en posición 1 si está libre
+            } else {
+              this.robot1Cap2Pos2Visible = true;  // Coloca en posición 2 si la 1 está ocupada
+            }
+          } else if (this.robot2lab2Visible) {
+            this.robot2lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.robot2Cap2Pos1Visible = true;
+            } else {
+              this.robot2Cap2Pos2Visible = true;
+            }
+          } else if (this.robot3lab2Visible) {
+            this.robot3lab2Visible = false;
+            if (!this.cient1Cap2Pos1Visible && !this.cient2Cap2Pos1Visible && !this.cient3Cap2Pos1Visible &&
+              !this.robot1Cap2Pos1Visible && !this.robot2Cap2Pos1Visible && !this.robot3Cap2Pos1Visible) {
+              this.robot3Cap2Pos1Visible = true;
+            } else {
+              this.robot3Cap2Pos2Visible = true;
+            }
+          }
+        }
       }
     }
   }
+
+  regresarALaboratorio(tipo: string) {
+    if (this.capsule.length > 0) {
+      if (this.leftCapsuleState === 'assets/abierto1.png') {
+        // Lógica para regresar un científico al laboratorio
+        if (tipo === 'cientifico') {
+          // Verificar si hay algún científico en la cápsula y removerlo de la primera posición ocupada
+          if (this.cient1Cap1Pos1Visible) {
+            this.cient1Cap1Pos1Visible = false;
+            this.cient1lab1Visible = true;
+          } else if (this.cient1Cap1Pos2Visible) {
+            this.cient1Cap1Pos2Visible = false;
+            this.cient1lab1Visible = true;
+          } else if (this.cient2Cap1Pos1Visible) {
+            this.cient2Cap1Pos1Visible = false;
+            this.cient2lab1Visible = true;
+          } else if (this.cient2Cap1Pos2Visible) {
+            this.cient2Cap1Pos2Visible = false;
+            this.cient2lab1Visible = true;
+          } else if (this.cient3Cap1Pos1Visible) {
+            this.cient3Cap1Pos1Visible = false;
+            this.cient3lab1Visible = true;
+          } else if (this.cient3Cap1Pos2Visible) {
+            this.cient3Cap1Pos2Visible = false;
+            this.cient3lab1Visible = true;
+          }
+
+          // Incrementa el contador de científicos en el laboratorio y remueve del array de la cápsula
+          this.lab1Cientificos++;
+          const index = this.capsule.indexOf('cientifico');
+          if (index !== -1) {
+            this.capsule.splice(index, 1);
+          }
+        }
+
+        // Lógica para regresar un robot al laboratorio
+        else if (tipo === 'robot') {
+          // Verificar si hay algún robot en la cápsula y removerlo de la primera posición ocupada
+          if (this.robot1Cap1Pos1Visible) {
+            this.robot1Cap1Pos1Visible = false;
+            this.robot1lab1Visible = true;
+          } else if (this.robot1Cap1Pos2Visible) {
+            this.robot1Cap1Pos2Visible = false;
+            this.robot1lab1Visible = true;
+          } else if (this.robot2Cap1Pos1Visible) {
+            this.robot2Cap1Pos1Visible = false;
+            this.robot2lab1Visible = true;
+          } else if (this.robot2Cap1Pos2Visible) {
+            this.robot2Cap1Pos2Visible = false;
+            this.robot2lab1Visible = true;
+          } else if (this.robot3Cap1Pos1Visible) {
+            this.robot3Cap1Pos1Visible = false;
+            this.robot3lab1Visible = true;
+          } else if (this.robot3Cap1Pos2Visible) {
+            this.robot3Cap1Pos2Visible = false;
+            this.robot3lab1Visible = true;
+          }
+
+          // Incrementa el contador de robots en el laboratorio y remueve del array de la cápsula
+          this.lab1Robots++;
+          const index = this.capsule.indexOf('robot');
+          if (index !== -1) {
+            this.capsule.splice(index, 1);
+          }
+        }
+      } else if (this.rightCapsuleState === 'assets/abierto2.png') {
+        // Lógica para regresar un científico al laboratorio
+        if (tipo === 'cientifico') {
+          // Verificar si hay algún científico en la cápsula y removerlo de la primera posición ocupada
+          if (this.cient1Cap2Pos1Visible) {
+            this.cient1Cap2Pos1Visible = false;
+            this.cient1lab2Visible = true;
+          } else if (this.cient1Cap2Pos2Visible) {
+            this.cient1Cap2Pos2Visible = false;
+            this.cient1lab2Visible = true;
+          } else if (this.cient2Cap2Pos1Visible) {
+            this.cient2Cap2Pos1Visible = false;
+            this.cient2lab2Visible = true;
+          } else if (this.cient2Cap2Pos2Visible) {
+            this.cient2Cap2Pos2Visible = false;
+            this.cient2lab2Visible = true;
+          } else if (this.cient3Cap2Pos1Visible) {
+            this.cient3Cap2Pos1Visible = false;
+            this.cient3lab2Visible = true;
+          } else if (this.cient3Cap2Pos2Visible) {
+            this.cient3Cap2Pos2Visible = false;
+            this.cient3lab2Visible = true;
+          }
+
+          // Incrementa el contador de científicos en el laboratorio y remueve del array de la cápsula
+          this.lab2Cientificos++;
+          const index = this.capsule.indexOf('cientifico');
+          if (index !== -1) {
+            this.capsule.splice(index, 1);
+          }
+        }
+
+        // Lógica para regresar un robot al laboratorio
+        else if (tipo === 'robot') {
+          // Verificar si hay algún robot en la cápsula y removerlo de la primera posición ocupada
+          if (this.robot1Cap2Pos1Visible) {
+            this.robot1Cap2Pos1Visible = false;
+            this.robot1lab2Visible = true;
+          } else if (this.robot1Cap2Pos2Visible) {
+            this.robot1Cap2Pos2Visible = false;
+            this.robot1lab2Visible = true;
+          } else if (this.robot2Cap2Pos1Visible) {
+            this.robot2Cap2Pos1Visible = false;
+            this.robot2lab2Visible = true;
+          } else if (this.robot2Cap2Pos2Visible) {
+            this.robot2Cap2Pos2Visible = false;
+            this.robot2lab2Visible = true;
+          } else if (this.robot3Cap2Pos1Visible) {
+            this.robot3Cap2Pos1Visible = false;
+            this.robot3lab2Visible = true;
+          } else if (this.robot3Cap2Pos2Visible) {
+            this.robot3Cap2Pos2Visible = false;
+            this.robot3lab2Visible = true;
+          }
+
+          // Incrementa el contador de robots en el laboratorio y remueve del array de la cápsula
+          this.lab2Robots++;
+          const index = this.capsule.indexOf('robot');
+          if (index !== -1) {
+            this.capsule.splice(index, 1);
+          }
+        }
+      }
+    }
+  }
+
 
   // Método para enviar la cápsula
   enviarCapsula() {
@@ -264,11 +514,9 @@ export class GameComponent {
       // Lógica para mostrar que el jugador ha ganado
 
     } else if ((this.lab1Cientificos < this.lab1Robots && this.lab1Cientificos > 0) ||
-               (this.lab2Cientificos < this.lab2Robots && this.lab2Cientificos > 0)) {
+      (this.lab2Cientificos < this.lab2Robots && this.lab2Cientificos > 0)) {
       // Lógica para mostrar que el jugador ha perdido
-      
+
     }
   }
-}
-  
 }
