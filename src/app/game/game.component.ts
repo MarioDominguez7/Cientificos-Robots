@@ -485,183 +485,15 @@ export class GameComponent {
   enviarCapsula() {
     if (this.capsule.length > 0 && this.validarEnvio()) {
       this.movimientos++;
+      let animacionPromesas: Promise<void>[] = [];
       if (this.isLeftCapsuleOpen) {
         this.lab2Cientificos += this.capsule.filter(x => x === 'cientifico').length;
         this.lab2Robots += this.capsule.filter(x => x === 'robot').length;
 
         this.capsule.forEach((element, index) => {
           // Determinamos la visibilidad en capsula2 según la posición en capsula1
-          if (element === 'cientifico') {
-            if (this.cient1Cap1Pos1Visible) {
-              this.cient1Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient1Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient1Cap2Pos1Visible = false;
-                    this.cient1lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-
-            } else if (this.cient1Cap1Pos2Visible) {
-              this.cient1Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient1Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient1Cap2Pos2Visible = false;
-                    this.cient1lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-
-            } else if (this.cient2Cap1Pos1Visible) {
-              this.cient2Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient2Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient2Cap2Pos1Visible = false;
-                    this.cient2lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient2Cap1Pos2Visible) {
-              this.cient2Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient2Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient2Cap2Pos2Visible = false;
-                    this.cient2lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient3Cap1Pos1Visible) {
-              this.cient3Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient3Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient3Cap2Pos1Visible = false;
-                    this.cient3lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient3Cap1Pos2Visible) {
-              this.cient3Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.cient3Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient3Cap2Pos2Visible = false;
-                    this.cient3lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            }
-          } else if (element === 'robot') {
-            if (this.robot1Cap1Pos1Visible) {
-              this.robot1Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot1Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot1Cap2Pos1Visible = false;
-                    this.robot1lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot1Cap1Pos2Visible) {
-              this.robot1Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot1Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot1Cap2Pos2Visible = false;
-                    this.robot1lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot2Cap1Pos1Visible) {
-              this.robot2Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot2Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot2Cap2Pos1Visible = false;
-                    this.robot2lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot2Cap1Pos2Visible) {
-              this.robot2Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot2Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot2Cap2Pos2Visible = false;
-                    this.robot2lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot3Cap1Pos1Visible) {
-              this.robot3Cap1Pos1Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot3Cap2Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot3Cap2Pos1Visible = false;
-                    this.robot3lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot3Cap1Pos2Visible) {
-              this.robot3Cap1Pos2Visible = false;
-              this.closeLeftCapsule();
-              setTimeout(() => {
-                this.openRightCapsule();
-                setTimeout(() => {
-                  this.robot3Cap2Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot3Cap2Pos2Visible = false;
-                    this.robot3lab2Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            }
-          }
+          let animacion = this.animarMovimiento(element);
+          animacionPromesas.push(animacion);
         });
       } else {
         this.lab1Cientificos += this.capsule.filter(x => x === 'cientifico').length;
@@ -669,182 +501,395 @@ export class GameComponent {
 
         this.capsule.forEach((element, index) => {
           // Determinamos la visibilidad en capsula2 según la posición en capsula1
-          if (element === 'cientifico') {
-            if (this.cient1Cap2Pos1Visible) {
-              this.cient1Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient1Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient1Cap1Pos1Visible = false;
-                    this.cient1lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-
-            } else if (this.cient1Cap2Pos2Visible) {
-              this.cient1Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient1Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient1Cap1Pos2Visible = false;
-                    this.cient1lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-
-            } else if (this.cient2Cap2Pos1Visible) {
-              this.cient2Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient2Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient2Cap1Pos1Visible = false;
-                    this.cient2lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient2Cap2Pos2Visible) {
-              this.cient2Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient2Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient2Cap1Pos2Visible = false;
-                    this.cient2lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient3Cap2Pos1Visible) {
-              this.cient3Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient3Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.cient3Cap1Pos1Visible = false;
-                    this.cient3lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            } else if (this.cient3Cap2Pos2Visible) {
-              this.cient3Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.cient3Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.cient3Cap1Pos2Visible = false;
-                    this.cient3lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-
-              }, 1000);
-
-            }
-          } else if (element === 'robot') {
-            if (this.robot1Cap2Pos1Visible) {
-              this.robot1Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot1Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot1Cap1Pos1Visible = false;
-                    this.robot1lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot1Cap2Pos2Visible) {
-              this.robot1Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot1Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot1Cap1Pos2Visible = false;
-                    this.robot1lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot2Cap2Pos1Visible) {
-              this.robot2Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot2Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot2Cap1Pos1Visible = false;
-                    this.robot2lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot2Cap2Pos2Visible) {
-              this.robot2Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot2Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot2Cap1Pos2Visible = false;
-                    this.robot2lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot3Cap2Pos1Visible) {
-              this.robot3Cap2Pos1Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot3Cap1Pos1Visible = true;
-                  setTimeout(() => {
-                    this.robot3Cap1Pos1Visible = false;
-                    this.robot3lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            } else if (this.robot3Cap2Pos2Visible) {
-              this.robot3Cap2Pos2Visible = false;
-              this.closeRightCapsule();
-              setTimeout(() => {
-                this.openLeftCapsule();
-                setTimeout(() => {
-                  this.robot3Cap1Pos2Visible = true;
-                  setTimeout(() => {
-                    this.robot3Cap1Pos2Visible = false;
-                    this.robot3lab1Visible = true;
-                  }, 1000);
-                }, 1000);
-              }, 1000);
-            }
-          }
+          let animacion = this.animar2Movimiento(element);
+          animacionPromesas.push(animacion);
         });
       }
+      Promise.all(animacionPromesas).then(() => {
       this.capsule = []; // Vacía la cápsula después de enviar
       this.verificarGanador();
+      });
     }
+  }
+
+  animarMovimiento(element: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (element === 'cientifico') {
+        if (this.cient1Cap1Pos1Visible) {
+          this.cient1Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient1Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.cient1Cap2Pos1Visible = false;
+                this.cient1lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+
+        } else if (this.cient1Cap1Pos2Visible) {
+          this.cient1Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient1Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.cient1Cap2Pos2Visible = false;
+                this.cient1lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+
+        } else if (this.cient2Cap1Pos1Visible) {
+          this.cient2Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient2Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.cient2Cap2Pos1Visible = false;
+                this.cient2lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient2Cap1Pos2Visible) {
+          this.cient2Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient2Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.cient2Cap2Pos2Visible = false;
+                this.cient2lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient3Cap1Pos1Visible) {
+          this.cient3Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient3Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.cient3Cap2Pos1Visible = false;
+                this.cient3lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient3Cap1Pos2Visible) {
+          this.cient3Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.cient3Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.cient3Cap2Pos2Visible = false;
+                this.cient3lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        }
+      } else if (element === 'robot') {
+        if (this.robot1Cap1Pos1Visible) {
+          this.robot1Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot1Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.robot1Cap2Pos1Visible = false;
+                this.robot1lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot1Cap1Pos2Visible) {
+          this.robot1Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot1Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.robot1Cap2Pos2Visible = false;
+                this.robot1lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot2Cap1Pos1Visible) {
+          this.robot2Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot2Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.robot2Cap2Pos1Visible = false;
+                this.robot2lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot2Cap1Pos2Visible) {
+          this.robot2Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot2Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.robot2Cap2Pos2Visible = false;
+                this.robot2lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot3Cap1Pos1Visible) {
+          this.robot3Cap1Pos1Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot3Cap2Pos1Visible = true;
+              setTimeout(() => {
+                this.robot3Cap2Pos1Visible = false;
+                this.robot3lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot3Cap1Pos2Visible) {
+          this.robot3Cap1Pos2Visible = false;
+          this.closeLeftCapsule();
+          setTimeout(() => {
+            this.openRightCapsule();
+            setTimeout(() => {
+              this.robot3Cap2Pos2Visible = true;
+              setTimeout(() => {
+                this.robot3Cap2Pos2Visible = false;
+                this.robot3lab2Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }
+      } else {
+        resolve(); // Si no se necesita animación, resuelve inmediatamente
+      }
+    });
+  }
+
+  animar2Movimiento(element: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if (element === 'cientifico') {
+        if (this.cient1Cap2Pos1Visible) {
+          this.cient1Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient1Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.cient1Cap1Pos1Visible = false;
+                this.cient1lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+
+        } else if (this.cient1Cap2Pos2Visible) {
+          this.cient1Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient1Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.cient1Cap1Pos2Visible = false;
+                this.cient1lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+
+        } else if (this.cient2Cap2Pos1Visible) {
+          this.cient2Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient2Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.cient2Cap1Pos1Visible = false;
+                this.cient2lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient2Cap2Pos2Visible) {
+          this.cient2Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient2Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.cient2Cap1Pos2Visible = false;
+                this.cient2lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient3Cap2Pos1Visible) {
+          this.cient3Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient3Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.cient3Cap1Pos1Visible = false;
+                this.cient3lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        } else if (this.cient3Cap2Pos2Visible) {
+          this.cient3Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.cient3Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.cient3Cap1Pos2Visible = false;
+                this.cient3lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+
+          }, 1000);
+
+        }
+      } else if (element === 'robot') {
+        if (this.robot1Cap2Pos1Visible) {
+          this.robot1Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot1Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.robot1Cap1Pos1Visible = false;
+                this.robot1lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot1Cap2Pos2Visible) {
+          this.robot1Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot1Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.robot1Cap1Pos2Visible = false;
+                this.robot1lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot2Cap2Pos1Visible) {
+          this.robot2Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot2Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.robot2Cap1Pos1Visible = false;
+                this.robot2lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot2Cap2Pos2Visible) {
+          this.robot2Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot2Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.robot2Cap1Pos2Visible = false;
+                this.robot2lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot3Cap2Pos1Visible) {
+          this.robot3Cap2Pos1Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot3Cap1Pos1Visible = true;
+              setTimeout(() => {
+                this.robot3Cap1Pos1Visible = false;
+                this.robot3lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        } else if (this.robot3Cap2Pos2Visible) {
+          this.robot3Cap2Pos2Visible = false;
+          this.closeRightCapsule();
+          setTimeout(() => {
+            this.openLeftCapsule();
+            setTimeout(() => {
+              this.robot3Cap1Pos2Visible = true;
+              setTimeout(() => {
+                this.robot3Cap1Pos2Visible = false;
+                this.robot3lab1Visible = true;
+                resolve(); 
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }
+      } else {
+        resolve(); // Si no se necesita animación, resuelve inmediatamente
+      }
+    });
   }
 
   //Método para validar el envío de la cápsula
@@ -864,7 +909,8 @@ export class GameComponent {
       // Lógica para mostrar que el jugador ha ganado
       this.record = this.datosService.getRecord();
       if(this.movimientos < this.record || this.record === 0){
-        alert('¡Has ganado!\n\nNuevo Record: ' + this.record + '\n\n¡Sigue jugando!');
+        alert('¡Has ganado!\n\nNuevo Record: ' + this.movimientos + '\n\n¡Sigue jugando!');
+        this.datosService.setRecord(this.movimientos);
         this.reiniciarJuego();
         this.goBack();
       }else{
