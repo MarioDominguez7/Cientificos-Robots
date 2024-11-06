@@ -867,6 +867,7 @@ export class GameComponent {
         this.router.navigate(['/win']); 
         this.reiniciarJuego();
       } else {
+        this.datosService.setMovimientos(this.movimientos);
         this.router.navigate(['/win']); 
         this.reiniciarJuego();
       }
